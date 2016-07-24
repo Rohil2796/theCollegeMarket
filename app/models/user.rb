@@ -1,5 +1,9 @@
 class User < ApplicationRecord
-  validates :firstName,  presence: true
-  validates :lastName,  presence: true
-  validates :email, presence: true
+  before_save { self.email = email.downcase }
+  validates :firstName,  presence: true, length: { maximum: 35 }
+  validates :lastName,  presence: true, length: { maximum: 35 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 100 },
+  						format: { with: VALID_EMAIL_REGEX }, 
+  						uniqueness: { case_sensitive: false }
 end
