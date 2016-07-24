@@ -12,25 +12,25 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
   # end
 
   test "should get hello" do
-    get pages_hello
+    get pages_hello_url
     assert_response :success
     assert_select "title", "Hello | #{@base_title}"
   end
 
   test "should get home" do
-    get pages_home
+    get pages_home_url
     assert_response :success
     assert_select "title", "Home | #{@base_title}"
   end
 
   test "should get about" do
-    get pages_about
+    get pages_about_url
     assert_response :success
     assert_select "title", "About | #{@base_title}"
   end        
 
   test "should get contact" do
-    get pages_contact
+    get pages_contact_url
     assert_response :success
     assert_select "title", "Contact | #{@base_title}"
   end
