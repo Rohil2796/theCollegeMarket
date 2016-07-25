@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get    'pages/help' 
   get    'pages/about'
   get    'pages/contact'
-  get    'users/signup'
+  get    '/signup',  to: 'users#new'
   resources :users do
     member do
       get :following, :followers
