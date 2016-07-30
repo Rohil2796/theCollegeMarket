@@ -1,7 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.action_mailer.delivery_method = :production
-  config.action_mailer.default_url_options = { :host => 'https://sleepy-fortress-31986.herokuapp.com' }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  host = 'arcane-scrubland-85798.herokuapp.com'
+  config.action_mailer.default_url_options = { host: host }
   # Code is not reloaded between requests.
   config.cache_classes = true
 
