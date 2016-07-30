@@ -3,12 +3,8 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :test
-  if Rails.env.production? 
-    host = 'https://sleepy-fortress-31986.herokuapp.com'
-  else 
-    host =  'localhost:3000' 
-  end
-  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  config.action_mailer.default_url_options = { :host => 'localhost' }
+  
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

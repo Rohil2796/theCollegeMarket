@@ -33,11 +33,7 @@ Rails.application.configure do
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
-  if Rails.env.production? 
-    config.action_mailer.default_url_options = { host:  'https://sleepy-fortress-31986.herokuapp.com' }
-  else 
-    config.action_mailer.default_url_options = { host:  'localhost:3000' }  
-  end 
+  config.action_mailer.default_url_options = { :host => 'localhost' }
 
 
   # Print deprecation notices to the stderr.
