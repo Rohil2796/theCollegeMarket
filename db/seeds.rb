@@ -3,7 +3,9 @@ User.create!(firstName:  "Example",
              email: "exampleuser20XX@u.northwestern.edu",
              password:              "foobar",
              password_confirmation: "foobar",
-             admin: true)
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
 
 99.times do |n|
   firstName  = Faker::Name.first_name
@@ -14,5 +16,7 @@ User.create!(firstName:  "Example",
                lastName:  lastName,
                email: email,
                password:              password,
-               password_confirmation: password)
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
 end
