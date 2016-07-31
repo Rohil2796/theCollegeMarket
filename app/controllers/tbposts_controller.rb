@@ -1,0 +1,2 @@
+class TbpostsController < ApplicationController
+end

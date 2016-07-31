@@ -10,12 +10,12 @@
     </section>
   </aside>
   <div class="col-md-8">
-    <% if @user.TbPost.any? %>
-      <h3>Textbook Posts (<%= @user.TbPost.count %>)</h3>
-      <ol class="TbPost">
-        <%= render @tb %>
+    <% if @user.tbpost.any? %>
+      <h3>tbpost (<%= @user.tbpost.count %>)</h3>
+      <ol class="tbpost">
+        <%= render @tbpost %>
       </ol>
-      <%= will_paginate @tb %>
+      <%= will_paginate @tbpost %>
     <% end %>
   </div>
 </div>

@@ -1,0 +1,2 @@
+module TbpostsHelper
+end

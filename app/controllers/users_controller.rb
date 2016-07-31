@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 	
 	def show 
 		@user = User.find(params[:id])
-		@tbposts = @user.TbPost.paginate(page: params[:page])
+		@tbpost = @user.tbpost.paginate(page: params[:page])
 	end 
 
 	def new
