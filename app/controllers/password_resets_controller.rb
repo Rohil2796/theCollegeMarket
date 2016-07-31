@@ -9,7 +9,7 @@ class PasswordResetsController < ApplicationController
   def create
     @user = User.find_by(email: params[:password_reset][:email].downcase)
     if !@user.activated?
-      flash[:info] = "You must activate your account first! Check your email for activation link."
+      flash[:warning] = "You must activate your account first! Check your email for activation link."
       redirect_to root_url
     elsif @user 
       @user.create_reset_digest
