@@ -12,15 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20160731205229) do
 
-  create_table "tb_posts", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id", "created_at"], name: "index_tb_posts_on_user_id_and_created_at"
-    t.index ["user_id"], name: "index_tb_posts_on_user_id"
-  end
-
   create_table "tbposts", force: :cascade do |t|
     t.text     "content"
     t.integer  "user_id"
