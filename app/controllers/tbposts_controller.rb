@@ -22,7 +22,7 @@ before_action :correct_user,   only: :destroy
   private
 
     def tbpost_params
-      params.require(:tbpost).permit(:content)
+      params.require(:tbpost).permit(:content, :picture)
     end
 
     def correct_user
