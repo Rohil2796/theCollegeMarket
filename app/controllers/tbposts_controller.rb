@@ -3,7 +3,7 @@ before_action :logged_in_user, only: [:create, :destroy]
 before_action :correct_user,   only: :destroy
 
  def create
-    @tbpost = current_user.tbposts.build(tbpost_params)
+    @tbpost = current_user.tbpost.build(tbpost_params)
     if @tbpost.save
       flash[:success] = "Textbook Post created!"
       redirect_to root_url
