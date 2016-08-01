@@ -1,6 +1,6 @@
 <li id="tbpost-<%= tbpost.id %>">
   <%= link_to gravatar_for(tbpost.user, size: 50), tbpost.user %>
-  <span class="user"><%= link_to tbpost.user.name, tbpost.user %></span>
+  <span class="user"><%= link_to tbpost.user.firstName, tbpost.user %></span>
   <span class="content"><%= tbpost.content %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(tbpost.created_at) %> ago.
