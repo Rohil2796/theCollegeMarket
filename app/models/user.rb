@@ -69,6 +69,10 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
+  def feed
+    Tbpost.where("user_id = ?", id)
+  end
+
 
 
    private
