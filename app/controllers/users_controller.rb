@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 	def show 
 		@user = User.find(params[:id])
 		@tbpost = @user.tbpost.paginate(page: params[:page])
+		@users = User.all
 	end 
 
 	def new

@@ -73,6 +73,9 @@ class User < ApplicationRecord
     Tbpost.where("user_id = ?", id)
   end
 
+  def newfeed
+      @allusers
+  end
 
 
    private
