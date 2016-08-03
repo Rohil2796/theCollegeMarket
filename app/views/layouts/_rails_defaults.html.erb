@@ -1,8 +1,6 @@
  <%= csrf_meta_tags %>
  <%if Rails.env.production?%>
- <%= stylesheet_link_tag    'application', media: 'all',
-                                              'data-turbolinks-track': 'reload' %>
- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+ 
  <%else %>
   <%= stylesheet_link_tag    'default', media: 'all',
                                               'data-turbolinks-track': 'reload' %>
