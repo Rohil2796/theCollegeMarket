@@ -1,5 +1,9 @@
+<%= stylesheet_link_tag 'boostrap.min' %>  
+<%= stylesheet_link_tag 'animate.min' %> 
+<%= stylesheet_link_tag 'pe-icon-7-stroke' %>  
 
-  <div class="wrapper">
+
+<div class="wrapper">
     <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
 
     <!--
@@ -9,7 +13,7 @@
 
     -->
 
-      <div class="sidebar-wrapper">
+    	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text">
                     Creative Tim
@@ -59,14 +63,14 @@
                         <p>Notifications</p>
                     </a>
                 </li>
-        <li class="active-pro">
+				<li class="active-pro">
                     <a href="upgrade.html">
                         <i class="pe-7s-rocket"></i>
                         <p>Upgrade to PRO</p>
                     </a>
                 </li>
             </ul>
-      </div>
+    	</div>
     </div>
 
     <div class="main-panel">
@@ -376,15 +380,4 @@
         </footer>
 
     </div>
-</div>
-
-  <div class="col-md-8">
-    <% if @user.tbpost.any? %>
-      <h3>Textbook Posts (<%= @user.tbpost.count %>)</h3>
-      <ol class="content">
-        <%= render @tbpost %>
-      </ol>
-      <%= will_paginate @tbpost %>
-    <% end %>
-  </div>
 </div>
