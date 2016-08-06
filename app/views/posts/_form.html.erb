@@ -1,0 +1,67 @@
+<%= form_for(post) do |f| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :free %>
+    <%= f.check_box :free %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :obo %>
+    <%= f.check_box :obo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :expiredate %>
+    <%= f.date_select :expiredate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tix_eventname %>
+    <%= f.text_field :tix_eventname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tix_eventdate %>
+    <%= f.date_select :tix_eventdate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tb_classname %>
+    <%= f.text_field :tb_classname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tb_classnumber %>
+    <%= f.number_field :tb_classnumber %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tb_edition %>
+    <%= f.number_field :tb_edition %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :post_attachments
+  resources :posts
+  resources :categories
+  resources :communities
   root   'pages#home'
   get    '/hello' ,  to: 'pages#hello'
   get    '/home' ,  to: 'pages#home'

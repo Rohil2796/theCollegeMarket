@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  free: false
+  price: 9.99
+  obo: false
+  expiredate: 2016-08-05
+  tix_eventname: MyString
+  tix_eventdate: 2016-08-05
+  tb_classname: MyString
+  tb_classnumber: 1
+  tb_edition: 1
+
+two:
+  name: MyString
+  free: false
+  price: 9.99
+  obo: false
+  expiredate: 2016-08-05
+  tix_eventname: MyString
+  tix_eventdate: 2016-08-05
+  tb_classname: MyString
+  tb_classnumber: 1
+  tb_edition: 1

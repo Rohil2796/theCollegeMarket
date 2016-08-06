@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @post.name %>
+</p>
+
+<p>
+  <strong>Free:</strong>
+  <%= @post.free %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @post.price %>
+</p>
+
+<p>
+  <strong>Obo:</strong>
+  <%= @post.obo %>
+</p>
+
+<p>
+  <strong>Expiredate:</strong>
+  <%= @post.expiredate %>
+</p>
+
+<p>
+  <strong>Tix eventname:</strong>
+  <%= @post.tix_eventname %>
+</p>
+
+<p>
+  <strong>Tix eventdate:</strong>
+  <%= @post.tix_eventdate %>
+</p>
+
+<p>
+  <strong>Tb classname:</strong>
+  <%= @post.tb_classname %>
+</p>
+
+<p>
+  <strong>Tb classnumber:</strong>
+  <%= @post.tb_classnumber %>
+</p>
+
+<p>
+  <strong>Tb edition:</strong>
+  <%= @post.tb_edition %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
