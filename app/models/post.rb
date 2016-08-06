@@ -2,6 +2,9 @@ class Post < ApplicationRecord
   belongs_to :user
   has_and_belongs_to_many :categories 
   default_scope -> { order(created_at: :desc) }
+  has_many :post_attachments
+  accepts_nested_attributes_for :post_attachments
+
 
   validates :user_id, presence: true
   validates :name,  presence: true, length: { maximum: 70 }
@@ -17,4 +20,3 @@ class Post < ApplicationRecord
 
   
 end
- 
