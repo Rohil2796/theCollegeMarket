@@ -1,8 +1,7 @@
 class User < ApplicationRecord
   has_many :tbposts, dependent: :destroy
   has_many :post
-  belongs_to :community 
-  validates :community
+  has_one :community 
   accepts_nested_attributes_for :community
   attr_accessor :remember_token, :activation_token, :reset_token
   
