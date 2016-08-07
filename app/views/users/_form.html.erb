@@ -6,7 +6,7 @@
   <%= f.label :lastName, "Last Name" %>
   <%= f.text_field :lastName, class: 'form-control'  %>
 
-  <%= f.label :community, "Select Community" %>
+  <%= f.label :community_id, "Select Community" %>
   <%= f.collection_select :community_id, Community.order(:name),:id,:name, class: 'form-control'  %>
 
   <%= f.label :email, "Northwestern '.edu' Email" %>
