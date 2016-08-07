@@ -4,4 +4,5 @@ class Community < ApplicationRecord
 
 	enum community_type: { university: 0, company: 1, neighborhood: 2 }
 	
+	def get_community_id
 end
