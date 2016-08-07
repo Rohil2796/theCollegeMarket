@@ -4,8 +4,8 @@ class PagesController < ApplicationController
 
  def home
     if logged_in?
-      @tbpost  = current_user.tbpost.build
-      @feed_items = Tbpost.all.paginate(page: params[:page])
+      @post  = current_user.post.build
+      @feed_items = current_user.feed.paginate(page: params[:page])
     end
   end
 

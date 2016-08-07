@@ -1,12 +1,22 @@
-<%= form_for(@tbpost, html: { multipart: true }) do |f| %>  
+<%= form_for(@post, html: { multipart: true }) do |f| %>  
 <%= render 'shared/error_messages', object: f.object %>
+<div class="field">
+    <%= f.text_area :name, placeholder: "HEY..." %>
+  </div>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new Textbook post..." %>
+    <%= f.text_area :description, placeholder: "Create a new post..." %>
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
   <span class="picture">
-     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+     <%= f.label :avatar %><br>
+     <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
+      accept: 'image/jpeg,image/gif,image/png' %>
   </span>
+  <% Category.all.each do |category| %>
+  <%= check_box_tag "post[category_ids][]", category.id, @post.category_ids.include?(category.id) %>
+  <%= category.name %>
+  <br />
+<% end %>
 <% end %>
 
 <script type="text/javascript">
@@ -17,3 +27,5 @@
     }
   });
 </script>
+
+

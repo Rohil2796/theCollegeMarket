@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :tbposts, dependent: :destroy
-  has_many :posts
+  has_many :post
   belongs_to :community 
   attr_accessor :remember_token, :activation_token, :reset_token
   
@@ -78,7 +78,7 @@ class User < ApplicationRecord
   end
 
   def feed
-    Tbpost.where("user_id = ?", id)
+    Post.where("user_id = ?", id)
   end
 
   def newfeed

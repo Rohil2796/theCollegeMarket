@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806051552) do
+ActiveRecord::Schema.define(version: 20160807041236) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -20,11 +20,25 @@ ActiveRecord::Schema.define(version: 20160806051552) do
     t.string   "description"
   end
 
+  create_table "categories_posts", id: false, force: :cascade do |t|
+    t.integer "category_id", null: false
+    t.integer "post_id",     null: false
+    t.index ["category_id", "post_id"], name: "index_categories_posts_on_category_id_and_post_id"
+    t.index ["post_id", "category_id"], name: "index_categories_posts_on_post_id_and_category_id"
+  end
+
+  create_table "categoriesposts", id: false, force: :cascade do |t|
+    t.integer "categories_id", null: false
+    t.integer "posts_id",      null: false
+    t.index ["categories_id"], name: "index_categoriesposts_on_categories_id"
+    t.index ["posts_id"], name: "index_categoriesposts_on_posts_id"
+  end
+
   create_table "communities", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.integer  "type",       default: 0
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "communitytype"
   end
 
   create_table "post_attachments", force: :cascade do |t|
@@ -45,14 +59,15 @@ ActiveRecord::Schema.define(version: 20160806051552) do
     t.string   "tb_classname"
     t.integer  "tb_classnumber"
     t.integer  "tb_edition"
+    t.integer  "user_id"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.text     "description"
     t.integer  "status",         default: 0
     t.integer  "offerrequest",   default: 0
     t.integer  "posttype",       default: 0
-    t.integer  "user_id"
     t.index ["expiredate"], name: "index_posts_on_expiredate"
+    t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -80,6 +95,8 @@ ActiveRecord::Schema.define(version: 20160806051552) do
     t.datetime "activated_at"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
+    t.integer  "community_id"
+    t.index ["community_id"], name: "index_users_on_community_id"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

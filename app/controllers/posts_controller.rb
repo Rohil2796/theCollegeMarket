@@ -1,21 +1,27 @@
-class postsController < ApplicationController
+class PostsController < ApplicationController
 before_action :logged_in_user, only: [:create, :destroy]
 before_action :correct_user,   only: :destroy
 
 def show
+   @post = Post.find(params[:id])
    @post_attachments = @post.post_attachments.all
 end
 
 def new
    @post = Post.new
    @post_attachment = @post.post_attachments.build
+   @category = @post.categories.find(params[:id])
 end
 
 def create
   @post = current_user.post.build(post_params)
+
+
   if @post.save
-    params[:post_attachments]['avatar'].each do |a|
+    if !@post_attachment.nil? && params[:post_attachments]['avatar'].each do |a|
         @post_attachment = @post.post_attachments.create!(:avatar => a)
+    end
+    end
     flash[:success] = "Post(s) successfully created!"
     redirect_to root_url
   else
@@ -23,6 +29,7 @@ def create
     render 'pages/home'
   end
 end
+
 
   def destroy
     @post.destroy
@@ -34,7 +41,7 @@ end
 
     def post_params
       params.require(:post).permit(:name, :free, :price, :obo, :expiredate, :tix_eventname, :tix_eventdate, 
-      :tb_classname, :tb_classnumber, :offerrequest, :posttype, post_attachments_attributes: [:id, :post_id, :avatar])
+      :tb_classname, :tb_classnumber, :offerrequest, :posttype, category_ids: [], post_attachments_attributes: [:id, :post_id, :avatar])
     end
 
     def correct_user
