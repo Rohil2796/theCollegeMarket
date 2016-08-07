@@ -46,16 +46,16 @@ defaultcommunity = Community.find(1)
 # samplepost.categories << category
 
 
-# #sample admin user
-# User.create!(firstName:  "Example",
-#              lastName:  "User",
-#              email: "exampleuser20XX@u.northwestern.edu",
-#              password:              "password",
-#              password_confirmation: "password",
-#              admin: true,
-#              community: defaultcommunity,
-#              activated: true,
-#              activated_at: Time.zone.now)
+#sample admin user
+User.create!(firstName:  "Example",
+             lastName:  "User",
+             email: "exampleuser20XX@u.northwestern.edu",
+             password:              "password",
+             password_confirmation: "password",
+             admin: true,
+             community: defaultcommunity,
+             activated: true,
+             activated_at: Time.zone.now)
 
 # #fake users 
 # 99.times do |n|
@@ -74,11 +74,11 @@ defaultcommunity = Community.find(1)
 # end
 
 #fake posts of first six users to simulate activity 
-users = User.order(:created_at).take(6)
-50.times do |n|
-  category = Category.find(n+1)
-  content = Faker::Lorem.sentence(5)
-  users.each { |user| 
-    postt = user.posts.create!(name: "Sample Title", description: content) 
-    postt.categories << category }
-end
+# users = User.order(:created_at).take(6)
+# 50.times do |n|
+#   category = Category.find(n+1)
+#   content = Faker::Lorem.sentence(5)
+#   users.each { |user| 
+#     postt = user.posts.create!(name: "Sample Title", description: content) 
+#     postt.categories << category }
+# end
