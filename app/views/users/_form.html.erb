@@ -1,22 +1,10 @@
-<%= form_for(@user) do |f| %>
+<%= simple_form_for @user do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
-  <%= f.label :firstName, "First Name" %>
-  <%= f.text_field :firstName, class: 'form-control' %>
-
-  <%= f.label :lastName, "Last Name" %>
-  <%= f.text_field :lastName, class: 'form-control'  %>
-
-  <%= f.label :community_id, "Select Community" %>
-  <%= f.collection_select :community_id, Community.order(:name),:name, :id, class: 'form-control'  %>
-
-  <%= f.label :email, "Northwestern '.edu' Email" %>
-  <%= f.email_field :email, class: 'form-control'  %>
-
-  <%= f.label :password, "Password" %>
-  <%= f.password_field :password, class: 'form-control'  %>
-
-  <%= f.label :password_confirmation, "Password Confirmation" %>
-  <%= f.password_field :password_confirmation, class: 'form-control'  %>
-
-  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+  <%= f.input :firstName %>
+  <%= f.input :lastName %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+  <%= f.input :email %>
+  <%= f.association :community_id, Community.order(:name),:name, :id, prompt: "Choose your Community" %>
+  <%= f.button :submit %>
 <% end %>
