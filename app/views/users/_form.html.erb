@@ -5,6 +5,6 @@
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
   <%= f.input :email %>
-  <%= f.association :community_id %>
+  <%= f.association :community, Community.order(:name),:name, :id, prompt: "Choose your Community" %>
   <%= f.button :submit %>
 <% end %>
