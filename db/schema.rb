@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160807041236) do
+ActiveRecord::Schema.define(version: 20160807040815) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -18,13 +18,6 @@ ActiveRecord::Schema.define(version: 20160807041236) do
     t.datetime "updated_at",  null: false
     t.integer  "itemservice"
     t.string   "description"
-  end
-
-  create_table "categories_posts", id: false, force: :cascade do |t|
-    t.integer "category_id", null: false
-    t.integer "post_id",     null: false
-    t.index ["category_id", "post_id"], name: "index_categories_posts_on_category_id_and_post_id"
-    t.index ["post_id", "category_id"], name: "index_categories_posts_on_post_id_and_category_id"
   end
 
   create_table "categoriesposts", id: false, force: :cascade do |t|
@@ -39,6 +32,13 @@ ActiveRecord::Schema.define(version: 20160807041236) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "communitytype"
+  end
+
+  create_table "communities_users", id: false, force: :cascade do |t|
+    t.integer "user_id",      null: false
+    t.integer "community_id", null: false
+    t.index ["community_id", "user_id"], name: "index_communities_users_on_community_id_and_user_id"
+    t.index ["user_id", "community_id"], name: "index_communities_users_on_user_id_and_community_id"
   end
 
   create_table "post_attachments", force: :cascade do |t|
