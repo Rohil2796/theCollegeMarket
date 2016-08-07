@@ -4,7 +4,7 @@
   <%= f.input :lastName %>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
-  <%= f.input :email, label: "Enter in your community-specific email", prompt: "For Northwestern, use your 'u.northwestern.edu' email" %>
+  <%= f.input :email, label: "Enter in your community-specific email",:input_html => {  prompt: "For Northwestern, use your 'u.northwestern.edu' email"  }%>
   <%= f.association :community %>
   <%= f.button :submit %>
 <% end %>
