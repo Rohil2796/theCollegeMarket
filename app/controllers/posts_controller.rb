@@ -10,7 +10,6 @@ end
 def new
    @post = Post.new
    @post_attachment = @post.post_attachments.build
-   @category = @post.categories.find(params[:id])
 end
 
 def create
