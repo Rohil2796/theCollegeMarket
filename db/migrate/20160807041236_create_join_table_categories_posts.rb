@@ -1,6 +1,6 @@
 class CreateJoinTableCategoriesPosts < ActiveRecord::Migration[5.0]
   def change
-  create_table :categoriesposts, :id => false do |t|
+  create_table :categories_posts, :id => false do |t|
   t.references :categories, :null => false
   t.references :posts, :null => false
 end
