@@ -1,58 +1,59 @@
-<%= form_for Post.new do |f| %>
+<%= form_for(@post) do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :free %>
-    <%= f.check_box :free %>
+    <%= f.check_box :free, class: 'form-control'  %>
   </div>
 
   <div class="field">
     <%= f.label :price %>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, class: 'form-control'  %>
   </div>
 
   <div class="field">
     <%= f.label :obo %>
-    <%= f.check_box :obo %>
+    <%= f.check_box :obo, class: 'form-control'  %>
   </div>
 
   <div class="field">
     <%= f.label :expiredate %>
-    <%= f.date_select :expiredate %>
+    <%= f.date_select :expiredate, class: 'form-control'  %>
   </div>
 
   <div class="field">
     <%= f.label :tix_eventname %>
-    <%= f.text_field :tix_eventname %>
+    <%= f.text_field :tix_eventname, class: 'form-control'  %>
   </div>
 
   <div class="field">
     <%= f.label :tix_eventdate %>
-    <%= f.date_select :tix_eventdate %>
+    <%= f.date_select :tix_eventdate, class: 'form-control'  %>
   </div>
 
   <div class="field">
     <%= f.label :tb_classname %>
-    <%= f.text_field :tb_classname %>
+    <%= f.text_field :tb_classname, class: 'form-control'  %>
   </div>
 
   <div class="field">
     <%= f.label :tb_classnumber %>
-    <%= f.number_field :tb_classnumber %>
+    <%= f.number_field :tb_classnumber, class: 'form-control'  %>
   </div>
 
   <div class="field">
     <%= f.label :tb_edition %>
-    <%= f.number_field :tb_edition %>
+    <%= f.number_field :tb_edition, class: 'form-control'  %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
