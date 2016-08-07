@@ -1,7 +1,67 @@
+<%= form_for(@post) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :free %>
+    <%= f.check_box :free, class: 'form-control'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price, class: 'form-control'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :obo %>
+    <%= f.check_box :obo, class: 'form-control'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :expiredate %>
+    <%= f.date_select :expiredate, class: 'form-control'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tix_eventname %>
+    <%= f.text_field :tix_eventname, class: 'form-control'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tix_eventdate %>
+    <%= f.date_select :tix_eventdate, class: 'form-control'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tb_classname %>
+    <%= f.text_field :tb_classname, class: 'form-control'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tb_classnumber %>
+    <%= f.number_field :tb_classnumber, class: 'form-control'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tb_edition %>
+    <%= f.number_field :tb_edition, class: 'form-control'  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
 <%= simple_form_for @post do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
   <%= f.input :name %>
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
-  <%= f.input :price %>
+  <%= f.input :obo, label: "Select this if your price is OBO:",
+    input_html: { "data-tooltip" => true, :class => "has-tip", :title => "'Or Best Offer'" } %>
   <%= f.button :submit %>
 <% end %>
