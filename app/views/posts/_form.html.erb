@@ -1,7 +1,7 @@
 <%= simple_form_for @post do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
   <%= f.input :name %>
-  <%= f.input :price, label: "Free?", selected: 0,  as: :check_boxes %>
+  <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
   <%= f.input :price %>
   <%= f.button :submit %>
 <% end %>
