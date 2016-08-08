@@ -21,7 +21,9 @@ class Post < ApplicationRecord
   enum status: { active: 0, inactive: 1, sold: 2 }
   validates :status, inclusion: { in: statuses.keys }
 
-  enum postitemservice: { item: 0, service: 1 }
+  enum postitemservice: { "Item" => 0, "Service" => 1 }
+
+
 
 
   enum offerrequest: { offer: 0, request: 1 }
