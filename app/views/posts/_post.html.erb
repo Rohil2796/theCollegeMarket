@@ -4,10 +4,10 @@
   <span class="content">
   <%= post.name %>
   <%= post.description %>
-
+  <% if !@post_attachments.nil? %>
   <% @post_attachments.each do |p| %>
   <%= image_tag p.avatar_url %>
-
+  <% end %>
 
 
 <% end %>
