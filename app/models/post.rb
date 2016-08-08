@@ -2,7 +2,7 @@ class Post < ApplicationRecord
 
   belongs_to :user
 
-  has_and_belongs_to_many :categories, :join_table => "categories_posts", :association_foreign_key => "post_id", :foreign_key => "category_id"
+  has_and_belongs_to_many :categories, :join_table => "posts_categories", :association_foreign_key => "categories_id", :foreign_key => "posts_id"
   accepts_nested_attributes_for :categories
   
   default_scope -> { order(created_at: :desc) }
@@ -20,6 +20,9 @@ class Post < ApplicationRecord
 
   enum status: { active: 0, inactive: 1, sold: 2 }
   validates :status, inclusion: { in: statuses.keys }
+
+  enum postitemservice: { item: 0, service: 1 }
+
 
   enum offerrequest: { offer: 0, request: 1 }
   validates :offerrequest, inclusion: { in: offerrequests.keys }

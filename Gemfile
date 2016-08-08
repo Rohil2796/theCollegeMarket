@@ -17,6 +17,7 @@ gem 'jquery-rails',            '4.1.1'
 gem 'turbolinks',              '5.0.0'
 gem 'jbuilder',                '2.4.1'
 gem 'simple_form'
+gem 'enum_help'
 
 
 group :development, :test do
