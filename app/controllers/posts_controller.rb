@@ -40,7 +40,7 @@ end
 
     def post_params
       params.require(:post).permit(:name, :free, :price, :obo, :expiredate, :tix_eventname, :tix_eventdate, 
-      :tb_classname, :tb_classnumber, :offerrequest, :posttype, category_ids: [], post_attachments_attributes: [:id, :post_id, :avatar])
+      :tb_classname, :tb_classnumber, :offerrequest, :posttype, category_id: [], post_attachments_attributes: [:id, :post_id, :avatar])
     end
 
     def correct_user
