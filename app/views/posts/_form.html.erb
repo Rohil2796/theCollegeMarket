@@ -5,5 +5,5 @@
   <%= f.input :obo, label: "Select this if your price is OBO:",
     input_html: { "data-tooltip" => true, :class => "has-tip", :title => "'Or Best Offer'" }, as: :radio_buttons %>
   <%= f.button :submit %>
-  <%= f.association :categories %> 
+  <%= f.association :categories, as: :check_boxes %> 
 <% end %>
