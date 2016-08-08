@@ -1,8 +1,8 @@
 <%= simple_form_for @post do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
   <%= f.input :name, label: "Title:" %>
-   <%= f.input :postitemservice %>
-   <%= f.input :offerrequest %>
+   <%= f.input :offerrequest, placeholder: "Select an option", label: "Is your post a request or an offer?" %>
+   <%= f.input :postitemservice, placeholder: "Select an option", label: "And is your post in regards to an item, or a service?" %>
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
   <%= f.input :obo, label: "Select this if your price is OBO:",
     input_html: { "data-tooltip" => true, :class => "has-tip", :title => "'Or Best Offer'" }, as: :radio_buttons, boolean_style: :inline%>
