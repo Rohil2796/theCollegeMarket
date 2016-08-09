@@ -3,7 +3,7 @@
   <%= f.input :name, label: "Title:" %>
    <%= f.input :offerrequest, placeholder: 'Select an option', label: "Is your post a request or an offer?" %>
    <%= f.input :postitemservice, placeholder: "Select an option", label: "And is your post in regards to an item, or a service?",
-     label_html: { class: 'itemservice_selector' } %>
+     input_html: { class: 'itemservice_selector' } %>
 
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
   <%= f.input :obo, label: "Select this if your price is OBO:",
@@ -11,11 +11,11 @@
      
      <%= f.association :categories, :as => :collection_select, collection: Category.where('itemservice <>?', 1),  input_html: { class: 'chosen-select' }, label: "Select a category for your item: " ,
       :tooltip_method => :category_tooltip, 
-      label_html: { class: 'item_selected' }%>
+      input_html: { class: 'item_selected' }%>
 
      <%= f.association :categories, :as => :collection_select, collection: Category.where('itemservice <>?', 0),  input_html: { class: 'chosen-select' }, label: "Select a category for your item: " ,
      :tooltip_method => :category_tooltip,
-     label_html: { class: 'service_selected' }%>
+     input_html: { class: 'service_selected' }%>
 
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>
      <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
