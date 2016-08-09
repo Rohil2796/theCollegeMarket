@@ -12,11 +12,6 @@
      <%= f.association :categories, :as => :collection_select, collection: Category.where('itemservice <>?', 1),  input_html: { class: 'chosen-select' }, label: "Select a category for your item: " ,
       :tooltip_method => :category_tooltip, 
       input_html: { class: "item_selected", id: 'item_selected' }%>
-
-     <%= f.association :categories, :as => :collection_select, collection: Category.where('itemservice <>?', 0),  input_html: { class: 'chosen-select' }, label: "Select a category for your item: " ,
-     :tooltip_method => :category_tooltip,
-     input_html: { class: "service_selected", id: 'service_selected' }%>
-
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>
      <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
       accept: 'image/jpeg,image/gif,image/png' %>
@@ -28,10 +23,6 @@
 $(".chosen-select").chosen(
   allow_single_deselect: true
   );
-if($('#itemservice_selector').val() == "Item"){
-    $(this).next("item_selected").toggle();    
-} else {
-     $(this).next("service_selected").toggle();
-}
+
 
 </script>
