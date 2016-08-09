@@ -28,7 +28,7 @@
 $(".chosen-select").chosen(
   allow_single_deselect: true
   )
-$(document).ready(function(){
+$("itemservice_selector").ready(function(){
     $("#itemservice_selector").change(function(){
         if($("#itemservice_selector").val() == "Item"){
           $(".item_selected").fadeIn('fast');   
