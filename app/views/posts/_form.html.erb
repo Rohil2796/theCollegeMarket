@@ -7,7 +7,7 @@
   <%= f.input :obo, label: "Select this if your price is OBO:",
     input_html: { "data-tooltip" => true, :class => "has-tip", :title => "'Or Best Offer'" }, as: :radio_buttons, boolean_style: :inline%>
      
-     <%= f.association :categories,   input_html: { class: 'chosen-select' }  %>
+     <%= f.association :categories, :as => :collection_select, collection: Category.where('itemservice <>?', 1),  input_html: { class: 'chosen-select' }  %>
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>
      <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
       accept: 'image/jpeg,image/gif,image/png' %>
@@ -16,5 +16,6 @@
 <% end %>
 
 <script>
-$(".chosen-select").chosen()
+$(".chosen-select").chosen(
+  allow_single_deselect: true)
 </script>
