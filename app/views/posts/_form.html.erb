@@ -30,20 +30,13 @@ $(".chosen-select").chosen(
   )
 $("itemservice_selector").ready(function(){
     $("itemservice_selector").change(function(){
-        if($("itemservice_selector").val() == 1){
+        if($("#itemservice_selector").val() == 1){
           $(".item_selected").fadeIn('fast');   
         }           
         else
           $(".service_selected").fadeIn('fast');   
         }            
     });
-    $("itemservice_selector").change(function(){
-        if($("itemservice_selector").val() != 1){
-          $(".item_selected").fadeOut('fast');   
-        }           
-        else
-          $(".service_selected").fadeOut('fast');   
-        }            
-    });
+    
 });
 </script>
