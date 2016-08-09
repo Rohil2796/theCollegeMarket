@@ -22,8 +22,7 @@ def create
     flash[:success] = "Post(s) successfully created!"
     redirect_to root_url
   else
-    @feed_items = []
-    render 'pages/home'
+    render 'new'
   end
 end
 
