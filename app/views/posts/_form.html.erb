@@ -9,8 +9,9 @@
   <%= f.input :obo, label: "Select this if your price is OBO:",
     input_html: { "data-tooltip" => true, :class => "has-tip", :title => "'Or Best Offer'" }, as: :radio_buttons, boolean_style: :inline%>
      
-     <%= f.association :categories, :as => :collection_select, collection: Category.where('itemservice <>?', 1),  input_html: { class: 'js-example-basic-multiple' multiple: 'multiple' }, label: "Select a category for your item: " ,
-      :tooltip_method => :category_tooltip %>
+     <%= f.association :categories, :as => :collection_select, collection: Category.where('itemservice <>?', 1),  input_html: { class: 'js-example-basic-multiple', multiple: 'multiple' }, 
+       label: "Select a category for your item",
+       :tooltip_method => :category_tooltip %>
 
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>
      <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
