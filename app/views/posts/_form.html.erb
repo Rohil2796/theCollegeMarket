@@ -2,13 +2,21 @@
 <%= render 'shared/error_messages', object: f.object %>
   <%= f.input :name, label: "Title:" %>
    <%= f.input :offerrequest, placeholder: 'Select an option', label: "Is your post a request or an offer?" %>
-   <%= f.input :postitemservice, placeholder: "Select an option", label: "And is your post in regards to an item, or a service?" %>
+   <%= f.input :postitemservice, placeholder: "Select an option", label: "And is your post in regards to an item, or a service?",
+     label_html: { class: 'itemservice_selector' } %>
+
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
   <%= f.input :obo, label: "Select this if your price is OBO:",
     input_html: { "data-tooltip" => true, :class => "has-tip", :title => "'Or Best Offer'" }, as: :radio_buttons, boolean_style: :inline%>
      
      <%= f.association :categories, :as => :collection_select, collection: Category.where('itemservice <>?', 1),  input_html: { class: 'chosen-select' }, label: "Select a category for your item: " ,
-     :title_method => :category_tooltip %>
+      :tooltip_method => :category_tooltip, 
+      label_html: { class: 'item_selected' }%>
+
+     <%= f.association :categories, :as => :collection_select, collection: Category.where('itemservice <>?', 0),  input_html: { class: 'chosen-select' }, label: "Select a category for your item: " ,
+     :tooltip_method => :category_tooltip,
+     label_html: { class: 'service_selected' }%>
+
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>
      <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
       accept: 'image/jpeg,image/gif,image/png' %>
@@ -20,4 +28,22 @@
 $(".chosen-select").chosen(
   allow_single_deselect: true
   )
+$(document).ready(function(){
+    $("#itemservice_selector").change(function(){
+        if($("#itemservice_selector").val() == "Item"){
+          $(".item_selected").fadeIn('fast');   
+        }           
+        else
+          $(".service_selected").fadeIn('fast');   
+        }            
+    });
+    $("#itemservice_selector").change(function(){
+        if($("#itemservice_selector").val() != "Item"){
+          $(".item_selected").fadeOut('fast');   
+        }           
+        else
+          $(".service_selected").fadeOut('fast');   
+        }            
+    });
+});
 </script>
