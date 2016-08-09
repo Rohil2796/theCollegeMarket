@@ -17,3 +17,4 @@
 //= require bootstrap
 //= require chosen-jquery
 //= require posts
+//= jquery-turbolinks
