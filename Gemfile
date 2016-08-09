@@ -23,6 +23,7 @@ gem 'mailboxer'
 gem 'compass-rails'
 gem 'chosen-rails'
 gem 'jquery-turbolinks'
+gem 'select2-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'

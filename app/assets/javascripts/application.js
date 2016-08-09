@@ -17,3 +17,4 @@
 //= require bootstrap
 //= require chosen-jquery
 //= require posts
+//= require select2
