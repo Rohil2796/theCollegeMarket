@@ -18,6 +18,10 @@ gem 'turbolinks',              '5.0.0'
 gem 'jbuilder',                '2.4.1'
 gem 'simple_form'
 gem 'enum_help'
+gem 'devise'
+gem 'mailboxer'
+gem 'compass-rails'
+gem 'chosen-rails'
 
 
 group :development, :test do
