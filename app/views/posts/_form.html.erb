@@ -11,11 +11,11 @@
      
      <%= f.association :categories, :as => :collection_select, collection: Category.where('itemservice <>?', 1),  input_html: { class: 'chosen-select' }, label: "Select a category for your item: " ,
       :tooltip_method => :category_tooltip, 
-      input_html: { id: 'item_selected' }%>
+      input_html: { class: "item_selected", id: 'item_selected' }%>
 
      <%= f.association :categories, :as => :collection_select, collection: Category.where('itemservice <>?', 0),  input_html: { class: 'chosen-select' }, label: "Select a category for your item: " ,
      :tooltip_method => :category_tooltip,
-     input_html: { id: 'service_selected' }%>
+     input_html: { class: "service_selected", id: 'service_selected' }%>
 
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>
      <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
