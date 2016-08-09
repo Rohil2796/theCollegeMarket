@@ -22,7 +22,7 @@ gem 'devise'
 gem 'mailboxer'
 gem 'compass-rails'
 gem 'chosen-rails'
-
+gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
