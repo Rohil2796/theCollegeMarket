@@ -28,22 +28,10 @@
 $(".chosen-select").chosen(
   allow_single_deselect: true
   );
-$("itemservice_selector").ready(function(){
-    $("itemservice_selector").change(function(){
-        if($("itemservice_selector").val() == "Item"){
-          $(".item_selected").fadeIn('fast');   
-        }           
-        else
-          $(".service_selected").fadeIn('fast');   
-        }            
-    });
-    $("itemservice_selector").change(function(){
-        if($("itemservice_selector").val() != "Item"){
-          $(".item_selected").fadeOut('fast');   
-        }           
-        else
-          $(".service_selected").fadeOut('fast');   
-        }            
-    });
-});
+if($('#itemservice_selector').val() == "Item"){
+    $(this).next("item_selected").toggle();    
+} else {
+     $(this).next("service_selected").toggle();
+}
+
 </script>
