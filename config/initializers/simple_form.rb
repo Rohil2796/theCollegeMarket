@@ -67,7 +67,7 @@ SimpleForm.setup do |config|
   # :first lists the first message for each field.
   # Use :to_sentence to list all errors for each field.
   # config.error_method = :first
-
+config.browser_validations = true
   # Default tag used for error notification helper.
   config.error_notification_tag = :div
 
