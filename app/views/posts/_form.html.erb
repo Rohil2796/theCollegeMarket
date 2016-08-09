@@ -29,16 +29,16 @@ $(".chosen-select").chosen(
   allow_single_deselect: true
   )
 $("itemservice_selector").ready(function(){
-    $("#itemservice_selector").change(function(){
-        if($("#itemservice_selector").val() == "Item"){
+    $("itemservice_selector").change(function(){
+        if($("itemservice_selector").val() == "Item"){
           $(".item_selected").fadeIn('fast');   
         }           
         else
           $(".service_selected").fadeIn('fast');   
         }            
     });
-    $("#itemservice_selector").change(function(){
-        if($("#itemservice_selector").val() != "Item"){
+    $("itemservice_selector").change(function(){
+        if($("itemservice_selector").val() != "Item"){
           $(".item_selected").fadeOut('fast');   
         }           
         else
