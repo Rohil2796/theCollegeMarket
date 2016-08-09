@@ -16,7 +16,7 @@ def create
   @post = current_user.post.build(post_params)
 
 
-  if @post.save
+  if @post.save!
     if !@post_attachment.nil? && params[:post_attachments]['avatar'].each do |a|
         @post_attachment = @post.post_attachments.create!(:avatar => a)
     end
