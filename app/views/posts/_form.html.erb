@@ -7,7 +7,7 @@
 
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
    <%= f.association :categories, as: :collection_select,
-     label_html: { id: 'testing' }%>
+     label_html: { class: 'testing' }%>
 
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>
      <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
@@ -20,7 +20,7 @@
 $(document).ready(function(){
     $("#itemservice_selector").change(function(){
         if($("#itemservice_selector").val() == "Item"){
-          $(".testing").fadeOut('fast');   
+          $(".testing").fadeIn('fast');   
         }            
     });        
 });
