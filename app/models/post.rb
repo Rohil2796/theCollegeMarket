@@ -16,7 +16,7 @@ class Post < ApplicationRecord
   validates :name,  presence: true, length: { maximum: 70 }
   validates :description, length: { maximum: 1000 }
   # validates :expiredate,     date: { after: Proc.new { Time.now },
-  #                 					before: Proc.new { Time.now + 1.year } }
+  #      dd           					before: Proc.new { Time.now + 1.year } }
 
 
   enum status: { active: 0, inactive: 1, sold: 2 }
