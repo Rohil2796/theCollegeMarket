@@ -5,9 +5,9 @@
    <%= f.input :postitemservice, placeholder: "Select an option", label: "And is your post in regards to an item, or a service?",
      input_html: { id: 'itemservice_selector' },
      :include_blank => false %>
-     
+
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
-   <%= f.input :category, as: :selectize, input_html: { id: "category-select"} %>
+   <%= f.input :categories, as: :selectize, input_html: { id: "category-select"} %>
  
 
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>
