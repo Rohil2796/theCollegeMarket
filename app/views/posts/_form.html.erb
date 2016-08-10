@@ -17,11 +17,11 @@
 <% end %>
 
 <script>
-$(document).ready(function() {
-$("#itemservice_selector").change(function(){
-    if( $(this).val() == "Item" ) {
-         $(".testing").fadeOut("fast");   
-    } 
+$(document).ready(function(){
+    $("#itemservice_selector").change(function(){
+        if($("#itemservice_selector").val() == "fiat"){
+          $(".testing").fadeIn('fast');   
+        }            
+    });        
 });
-}
 </script>
