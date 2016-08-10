@@ -3,11 +3,18 @@
   <%= f.input :name %>
    <%= f.input :offerrequest, placeholder: 'Select an option', label: "Is your post a request or an offer?" %>
    <%= f.input :postitemservice, placeholder: "Select an option", label: "And is your post in regards to an item, or a service?",
-     input_html: { id: 'itemservice_selector' } %>
+     input_html: { id: 'itemservice_selector' }
+     :include_blank => false %>
 
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
+   
    <%= f.association :categories, as: :collection_select,
-     input_html: { class: 'testing' }%>
+   collection: Category.where('itemservice <>?', 1),
+     input_html: { class: 'item_selected' }%>
+
+     <%= f.association :categories, as: :collection_select,
+     collection: Category.where('itemservice <>?', 0),
+     input_html: { class: 'service_selected' }%>
 
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>
      <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
@@ -20,7 +27,10 @@
 $(document).ready(function(){
     $("#itemservice_selector").change(function(){
         if($("#itemservice_selector").val() == "Item"){
-          $(".testing").fadeIn('fast');   
+          $(".item_selected").fadeIn('fast');   
+        } 
+        else if($("#itemservice_selector").val() == "Service"){
+          $(".service_selected").fadeIn('fast');   
         }            
     });        
 });

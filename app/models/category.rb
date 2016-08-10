@@ -7,4 +7,6 @@ class Category < ApplicationRecord
 	  	self.description
 	  end
 
+	  
+
 end
