@@ -7,7 +7,7 @@
 
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
    <%= f.association :categories, as: :collection_select,
-     label_html: { class: 'testing' }%>
+     input_html: { class: 'testing' }%>
 
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>
      <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
