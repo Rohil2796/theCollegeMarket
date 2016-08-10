@@ -7,7 +7,7 @@
      :include_blank => false %>
 
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
-   <%= f.association :categories, as: :selectize, input_html: { id: "category-select"} %>
+   <%= f.association :category_id, as: :selectize, input_html: { id: "category-select"} %>
  
 
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>

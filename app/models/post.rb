@@ -2,7 +2,7 @@ class Post < ApplicationRecord
 
   belongs_to :user
 
-  has_and_belongs_to_many :categories, :join_table => "posts_categories", :association_foreign_key => "categories_id", :foreign_key => "posts_id"
+  belongs_to :category
   accepts_nested_attributes_for :categories
   
   default_scope -> { order(created_at: :desc) }

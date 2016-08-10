@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808055652) do
+ActiveRecord::Schema.define(version: 20160810031532) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -53,16 +53,11 @@ ActiveRecord::Schema.define(version: 20160808055652) do
     t.integer  "offerrequest",    default: 0
     t.integer  "posttype",        default: 0
     t.integer  "postitemservice"
+    t.integer  "category_id"
+    t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["expiredate"], name: "index_posts_on_expiredate"
     t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
-  end
-
-  create_table "posts_categories", id: false, force: :cascade do |t|
-    t.integer "posts_id"
-    t.integer "categories_id"
-    t.index ["categories_id"], name: "index_posts_categories_on_categories_id"
-    t.index ["posts_id"], name: "index_posts_categories_on_posts_id"
   end
 
   create_table "tbposts", force: :cascade do |t|
