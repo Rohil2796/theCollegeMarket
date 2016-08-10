@@ -27,12 +27,12 @@
 $(document).ready(function(){
     $("#itemservice_selector").change(function(){
         if($("#itemservice_selector").val() == "Item"){
-          $(".item_selected").fadeIn('fast'); 
-          $(".service_selected").fadeOut('fast');  
+          $( "item_selected" ).prop( "disabled", false ); 
+         $( "service_selected" ).prop( "disabled", true );
         } 
         else if($("#itemservice_selector").val() == "Service"){
-          $(".service_selected").fadeIn('fast');   
-          $(".item_selected").fadeOut('fast'); 
+           $( "item_selected" ).prop( "disabled", true ); 
+         $( "service_selected" ).prop( "disabled", false );
         }            
     });        
 });
