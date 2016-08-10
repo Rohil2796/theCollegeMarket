@@ -19,3 +19,6 @@
 //= require posts
 //= require select2
 //= require selectize
+//= require jquery
+//= require jquery_ujs
+//= require dropzone.min

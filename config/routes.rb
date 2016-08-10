@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'uploads/new'
+
   resources :post_attachments
   resources :posts
+  resources :uploads
   resources :categories
   resources :communities
   root   'pages#home'

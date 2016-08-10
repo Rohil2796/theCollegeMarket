@@ -26,7 +26,7 @@ gem 'jquery-turbolinks'
 gem 'select2-rails'
 gem "selectize-rails"
 gem 'simple_form_extension'
-
+gem "paperclip"
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
