@@ -38,80 +38,80 @@ $(document).ready(function(){
 });
 
 
-// $("#select-car").selectize({
-//     options: [
-//         {id: 'avenger', make: 'dodge', model: 'Avenger'},
-//         {id: 'caliber', make: 'dodge', model: 'Caliber'},
-//         {id: 'caravan-grand-passenger', make: 'dodge', model: 'Caravan Grand Passenger'},
-//         {id: 'challenger', make: 'dodge', model: 'Challenger'},
-//         {id: 'ram-1500', make: 'dodge', model: 'Ram 1500'},
-//         {id: 'viper', make: 'dodge', model: 'Viper'},
-//         {id: 'a3', make: 'audi', model: 'A3'},
-//         {id: 'a6', make: 'audi', model: 'A6'},
-//         {id: 'r8', make: 'audi', model: 'R8'},
-//         {id: 'rs-4', make: 'audi', model: 'RS 4'},
-//         {id: 's4', make: 'audi', model: 'S4'},
-//         {id: 's8', make: 'audi', model: 'S8'},
-//         {id: 'tt', make: 'audi', model: 'TT'},
-//         {id: 'avalanche', make: 'chevrolet', model: 'Avalanche'},
-//         {id: 'aveo', make: 'chevrolet', model: 'Aveo'},
-//         {id: 'cobalt', make: 'chevrolet', model: 'Cobalt'},
-//         {id: 'silverado', make: 'chevrolet', model: 'Silverado'},
-//         {id: 'suburban', make: 'chevrolet', model: 'Suburban'},
-//         {id: 'tahoe', make: 'chevrolet', model: 'Tahoe'},
-//         {id: 'trail-blazer', make: 'chevrolet', model: 'TrailBlazer'},
-//     ],
-//     optgroups: [
-//         {id: 'dodge', name: 'Dodge'},
-//         {id: 'audi', name: 'Audi'},
-//         {id: 'chevrolet', name: 'Chevrolet'}
-//     ],
-//     labelField: 'model',
-//     valueField: 'id',
-//     optgroupField: 'make',
-//     optgroupLabelField: 'name',
-//     optgroupValueField: 'id',
-//     optgroupOrder: ['chevrolet', 'dodge', 'audi'],
-//     searchField: ['model'],
-//     plugins: ['optgroup_columns']
-
-
-
 $("#select-car").selectize({
     options: [
-        {id: '1', itemservice: 'item', alias: 'Furniture'},
-        {id: '2', itemservice: 'item', alias: 'Clothes'},
-        {id: '3', itemservice: 'item', alias: 'Books'},
-        {id: '4', itemservice: 'item', alias: 'Art & Décor'},
-        {id: '5', itemservice: 'item', alias: 'Kitchen'},
-        {id: '6', itemservice: 'item', alias: 'Appliances'},
-        {id: '7', itemservice: 'item', alias: 'Electronic Accessories'},
-        {id: '8', itemservice: 'item', alias: 'Electronic Devices'},
-        {id: '9', itemservice: 'item', alias: 'TV & Gaming'},
-        {id: '10', itemservice: 'item', alias: 'Mobile Devices & Computers'},
-        {id: '11', itemservice: 'item', alias: 'Office/School Supplies'},
-        {id: '12', itemservice: 'item', alias: 'Miscellaneous Item'},
-        {id: '13', itemservice: 'service', alias: 'Tutoring'},
-        {id: '14', itemservice: 'service', alias: 'Research'},
-        {id: '15', itemservice: 'service', alias: 'Job & Internship'},
-        {id: '16', itemservice: 'service', alias: 'Photography'},
-        {id: '17', itemservice: 'service', alias: 'Miscellaneous Service'},
+        {id: 'avenger', make: 'dodge', model: 'Avenger'},
+        {id: 'caliber', make: 'dodge', model: 'Caliber'},
+        {id: 'caravan-grand-passenger', make: 'dodge', model: 'Caravan Grand Passenger'},
+        {id: 'challenger', make: 'dodge', model: 'Challenger'},
+        {id: 'ram-1500', make: 'dodge', model: 'Ram 1500'},
+        {id: 'viper', make: 'dodge', model: 'Viper'},
+        {id: 'a3', make: 'audi', model: 'A3'},
+        {id: 'a6', make: 'audi', model: 'A6'},
+        {id: 'r8', make: 'audi', model: 'R8'},
+        {id: 'rs-4', make: 'audi', model: 'RS 4'},
+        {id: 's4', make: 'audi', model: 'S4'},
+        {id: 's8', make: 'audi', model: 'S8'},
+        {id: 'tt', make: 'audi', model: 'TT'},
+        {id: 'avalanche', make: 'chevrolet', model: 'Avalanche'},
+        {id: 'aveo', make: 'chevrolet', model: 'Aveo'},
+        {id: 'cobalt', make: 'chevrolet', model: 'Cobalt'},
+        {id: 'silverado', make: 'chevrolet', model: 'Silverado'},
+        {id: 'suburban', make: 'chevrolet', model: 'Suburban'},
+        {id: 'tahoe', make: 'chevrolet', model: 'Tahoe'},
+        {id: 'trail-blazer', make: 'chevrolet', model: 'TrailBlazer'},
     ],
-
-]
     optgroups: [
-        {id: 'item', name: 'Item'},
-        {id: 'service', name: 'Service'},
-        
+        {id: 'dodge', name: 'Dodge'},
+        {id: 'audi', name: 'Audi'},
+        {id: 'chevrolet', name: 'Chevrolet'}
     ],
-    labelField: 'alias',
+    labelField: 'model',
     valueField: 'id',
-    optgroupField: 'itemservice',
+    optgroupField: 'make',
     optgroupLabelField: 'name',
     optgroupValueField: 'id',
-    optgroupOrder: ['item', 'service'],
-    searchField: ['alias'],
+    optgroupOrder: ['chevrolet', 'dodge', 'audi'],
+    searchField: ['model'],
     plugins: ['optgroup_columns']
-});
+
+
+
+// $("#select-car").selectize({
+//     options: [
+//         {id: '1', itemservice: 'item', alias: 'Furniture'},
+//         {id: '2', itemservice: 'item', alias: 'Clothes'},
+//         {id: '3', itemservice: 'item', alias: 'Books'},
+//         {id: '4', itemservice: 'item', alias: 'Art & Décor'},
+//         {id: '5', itemservice: 'item', alias: 'Kitchen'},
+//         {id: '6', itemservice: 'item', alias: 'Appliances'},
+//         {id: '7', itemservice: 'item', alias: 'Electronic Accessories'},
+//         {id: '8', itemservice: 'item', alias: 'Electronic Devices'},
+//         {id: '9', itemservice: 'item', alias: 'TV & Gaming'},
+//         {id: '10', itemservice: 'item', alias: 'Mobile Devices & Computers'},
+//         {id: '11', itemservice: 'item', alias: 'Office/School Supplies'},
+//         {id: '12', itemservice: 'item', alias: 'Miscellaneous Item'},
+//         {id: '13', itemservice: 'service', alias: 'Tutoring'},
+//         {id: '14', itemservice: 'service', alias: 'Research'},
+//         {id: '15', itemservice: 'service', alias: 'Job & Internship'},
+//         {id: '16', itemservice: 'service', alias: 'Photography'},
+//         {id: '17', itemservice: 'service', alias: 'Miscellaneous Service'},
+//     ],
+
+// ]
+//     optgroups: [
+//         {id: 'item', name: 'Item'},
+//         {id: 'service', name: 'Service'},
+        
+//     ],
+//     labelField: 'alias',
+//     valueField: 'id',
+//     optgroupField: 'itemservice',
+//     optgroupLabelField: 'name',
+//     optgroupValueField: 'id',
+//     optgroupOrder: ['item', 'service'],
+//     searchField: ['alias'],
+//     plugins: ['optgroup_columns']
+// });
 
 </script>
