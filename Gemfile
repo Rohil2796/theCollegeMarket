@@ -24,6 +24,8 @@ gem 'compass-rails'
 gem 'chosen-rails'
 gem 'jquery-turbolinks'
 gem 'select2-rails'
+gem "selectize-rails"
+gem 'simple_form_extension'
 
 
 group :development, :test do
