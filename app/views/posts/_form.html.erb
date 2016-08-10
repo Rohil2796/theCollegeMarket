@@ -3,7 +3,7 @@
   <%= f.input :name %>
    <%= f.input :offerrequest, placeholder: 'Select an option', label: "Is your post a request or an offer?" %>
    <%= f.input :postitemservice, placeholder: "Select an option", label: "And is your post in regards to an item, or a service?",
-     input_html: { id: 'itemservice_selector' }
+     input_html: { id: 'itemservice_selector' },
      :include_blank => false %>
 
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
