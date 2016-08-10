@@ -7,7 +7,7 @@
      :include_blank => false %>
 
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
-   <%= f.input :name input_html { id: "select-car"} %>
+   <%= f.input :name, input_html: { id: "select-car"} %>
    <%= f.association :categories, as: :collection_select,
    collection: Category.where('itemservice <>?', 1),
      input_html: { class: 'item_selected' }%>
