@@ -19,5 +19,5 @@
  *= require selectize
  *= require selectize.default
  *= require dropzone
- *= require bootstrap
+ *= require _bootstrap
  */
