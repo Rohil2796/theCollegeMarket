@@ -3,6 +3,8 @@ class Post < ApplicationRecord
   belongs_to :user
 
   belongs_to :category
+    accepts_nested_attributes_for :category
+
   
   default_scope -> { order(created_at: :desc) }
   
