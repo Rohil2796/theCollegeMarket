@@ -2,7 +2,7 @@ class Post < ApplicationRecord
 
   belongs_to :user
 
-  belongs_to :category
+  belongs_to :category, :foreign_key => "category_id"
     accepts_nested_attributes_for :category
 
   
