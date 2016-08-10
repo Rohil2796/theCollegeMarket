@@ -9,7 +9,8 @@
   <%= f.input :obo, label: "Select this if your price is OBO:",
     input_html: { "data-tooltip" => true, :class => "has-tip", :title => "'Or Best Offer'", unchecked: false },          as: :check_box %>
      
-     <%= f.association :categories, as: :collection_select %>
+     <%= f.association :categories, as: :collection_select 
+     input_html: { id: 'testing' }%>
 
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>
      <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
@@ -18,3 +19,10 @@
    
 <% end %>
 
+<script>
+$("#itemservice_selector").change(function(){
+    if( $(this).val() === "2" ) {
+         $(".testing").fadeIn("fast");   
+    } 
+});
+</script>
