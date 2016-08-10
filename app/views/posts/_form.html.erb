@@ -17,9 +17,11 @@
 <% end %>
 
 <script>
+$(document).ready(function() {
 $("#itemservice_selector").change(function(){
-    if( $(this).val() == "1" ) {
-         $(".testing").fadeIn("fast");   
+    if( $(this).val() == "Item" ) {
+         $(".testing").fadeOut("fast");   
     } 
 });
+}
 </script>
