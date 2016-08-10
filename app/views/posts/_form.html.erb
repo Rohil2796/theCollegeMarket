@@ -10,10 +10,14 @@
      <%= f.input :category, as: :selectize, input_html: { id: "category-select"} %>
 
  
+<%= form_for(@upload, html: { multipart: true, class: "dropzone"}) do |f|  %>
+  <div class="fallback">
+    <%= f.file_field :image %><br>
+    <%= f.submit "Upload" %>
+  </div>
+<% end %>
 
-     <%= f.label :avatar, "Upload up to five photos at once: " %><br>
-     <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
-      accept: 'image/jpeg,image/gif,image/png' %>
+
   <%= f.button :submit %>
    
 <% end %>
