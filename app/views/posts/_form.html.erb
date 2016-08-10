@@ -7,7 +7,7 @@
 
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
   <%= f.input :obo, label: "Select this if your price is OBO:",
-    input_html: { "data-tooltip" => true, :class => "has-tip", :title => "'Or Best Offer'" }, as: :radio_buttons, boolean_style: :inline%>
+    input_html: { "data-tooltip" => true, :class => "has-tip", :title => "'Or Best Offer'", unchecked: false },          as: :check_box %>
      
      <%= f.association :categories, as: :collection_select %>
 
