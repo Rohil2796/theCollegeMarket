@@ -18,3 +18,4 @@
 //= require chosen-jquery
 //= require posts
 //= require select2
+//= require selectize
