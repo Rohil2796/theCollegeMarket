@@ -5,16 +5,10 @@
    <%= f.input :postitemservice, placeholder: "Select an option", label: "And is your post in regards to an item, or a service?",
      input_html: { id: 'itemservice_selector' },
      :include_blank => false %>
-
+     
   <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
-   <%= f.input :name, as: :selectize, input_html: { id: "select-car"} %>
-   <%= f.association :categories, as: :collection_select,
-   collection: Category.where('itemservice <>?', 1),
-     input_html: { class: 'item_selected' }%>
-
-     <%= f.association :categories, as: :collection_select,
-     collection: Category.where('itemservice <>?', 0), :label => false, 
-     input_html: { class: 'service_selected' }%>
+   <%= f.input :category, as: :selectize, input_html: { id: "category-select"} %>
+ 
 
      <%= f.label :avatar, "Upload up to five photos at once: " %><br>
      <%= f.file_field :avatar, :multiple => true, name: "post_attachments[avatar][]",
@@ -37,7 +31,7 @@ $(document).ready(function(){
     });        
 });
 
-$("#select-car").selectize({
+$("#category-select").selectize({
     options: [
         {id: '1', itemservice: 'item', alias: 'Furniture'},
         {id: '2', itemservice: 'item', alias: 'Clothes'},
