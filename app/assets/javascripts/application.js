@@ -20,4 +20,4 @@
 //= require selectize
 //= require jquery
 //= require jquery_ujs
-//= require dropzone.min
+
