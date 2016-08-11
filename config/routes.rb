@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   resources :post_attachments
   resources :posts
-  resources :uploads
+  resources :uploads, path: '' do
+  patch '/photoupload', to: 'users#photoupload'
+end
   resources :categories
   resources :communities
   root   'pages#home'
@@ -21,3 +23,4 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :tbposts,          only: [:create, :destroy]
 end
+

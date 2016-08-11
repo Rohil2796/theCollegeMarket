@@ -48,6 +48,17 @@ class UsersController < ApplicationController
 		redirect_to users_url
 	end
 
+	def photoupload
+		@user = user.find(params[:userid])
+		respondto do |format|
+			if @user.update(user_params)
+				format.js { render json: {photo: true} }
+			else
+				render 'new'
+			end
+		end
+	end
+
 	private
 
 		def user_params
@@ -71,5 +82,6 @@ class UsersController < ApplicationController
 		def admin_user
 			redirect_to(root_url) unless current_user.admin?
 		end
+
 
 end
