@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160810031532) do
+ActiveRecord::Schema.define(version: 20160811032658) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -74,8 +74,8 @@ ActiveRecord::Schema.define(version: 20160810031532) do
     t.string   "firstName"
     t.string   "lastName"
     t.string   "email"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "password_digest"
     t.string   "remember_digest"
     t.boolean  "admin"
@@ -85,6 +85,10 @@ ActiveRecord::Schema.define(version: 20160810031532) do
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
     t.integer  "community_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["community_id"], name: "index_users_on_community_id"
     t.index ["email"], name: "index_users_on_email", unique: true
   end

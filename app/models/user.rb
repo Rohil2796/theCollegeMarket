@@ -20,6 +20,9 @@ class User < ApplicationRecord
   has_secure_password 
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
+  has_attached_file :avatar, 
+                    styles: { :medium => "200x200>", :thumb => "100x100>" }
+  validates_attachment_content_type :avatar, :content_type => /^image\/(png|gif|jpeg|jpg)/
   
   
   # Returns the hash digest of the given string.
