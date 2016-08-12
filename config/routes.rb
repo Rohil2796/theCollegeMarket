@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   resources :post_attachments
   resources :posts
   
-  patch '/photoupload', to: 'users#photoupload'
-
+  
   resources :categories
   resources :communities
   root   'pages#home'

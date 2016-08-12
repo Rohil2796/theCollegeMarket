@@ -6,6 +6,6 @@
   <%= f.input :password_confirmation %>
   <%= f.input :email, label: "Enter in your community-specific email",:input_html => {  prompt: "For Northwestern, use your 'u.northwestern.edu' email"  }%>
   <%= f.association :community %>
-  <%= render 'avatar' %>
   <%= f.button :submit %>
 <% end %>
+
