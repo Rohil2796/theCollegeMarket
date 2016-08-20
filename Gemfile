@@ -20,13 +20,13 @@ gem 'simple_form'
 gem 'enum_help'
 gem 'devise'
 gem 'mailboxer'
-gem 'compass-rails'
-gem 'chosen-rails'
 gem 'jquery-turbolinks'
 gem 'select2-rails'
 gem "selectize-rails"
 gem 'simple_form_extension'
 gem "paperclip"
+gem 'aws-sdk-v1'
+gem "flat-ui-rails"
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'

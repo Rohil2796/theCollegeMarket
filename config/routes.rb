@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :post_attachments
   resources :posts
   
-  
+  resources :photos, only: [:new, :create, :index, :destroy]
   resources :categories
   resources :communities
   root   'pages#home'
