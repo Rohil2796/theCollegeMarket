@@ -9,7 +9,7 @@ class User < ApplicationRecord
                     default_url: "app/assets/images/:style/missing.png"
                     :storage => :s3,
                     :s3_credentials => "#{Rails.root}/config/s3.yml",
-                    :path => "/:class/:attachment/:id_partition/:style/:filename"
+                    :path => "/:class/:attachment/:id_partition/:style/:filename",
                     :url => ":s3_domain_url"
 
   validates_attachment_content_type :avatar, :content_type => /^image\/(png|gif|jpeg|jpg)/
