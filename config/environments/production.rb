@@ -17,10 +17,10 @@ Rails.application.configure do
     storage: :s3,
     s3_protocol: 'http',
     s3_credentials: {
-      bucket: ENV.fetch("S3_BUCKET"),
-      access_key_id: ENV.fetch("S3_ACCESS_KEY"),
-      secret_access_key: ENV.fetch("S3_SECRET_KEY"),
-      s3_region: ENV.fetch("S3_REGION"),
+      :bucket => ENV["S3_BUCKET"],
+      :access_key_id => ENV["S3_ACCESS_KEY"],
+      :secret_access_key => ENV["S3_SECRET_KEY"],
+      :s3_region => ENV["S3_REGION"],
     }
   }
 
