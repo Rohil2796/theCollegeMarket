@@ -15,7 +15,6 @@
 //= require turbolinks
 //= require_tree 
 //= require bootstrap
-//= require chosen-jquery
 //= require posts
 //= require selectize
 //= require jquery
