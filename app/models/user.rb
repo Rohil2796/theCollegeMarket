@@ -6,7 +6,7 @@ class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
   has_attached_file :avatar, 
                     styles: { medium: "300x300>", thumb: "100x100>" }, 
-                    default_url: "app/assets/images/:style/missing.png"
+                    default_url: "app/assets/images/:style/missing.png",
                     :storage => :s3,
                     :s3_credentials => "#{Rails.root}/config/s3.yml",
                     :path => "/:class/:attachment/:id_partition/:style/:filename",
