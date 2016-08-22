@@ -25,7 +25,7 @@ gem 'select2-rails'
 gem "selectize-rails"
 gem 'simple_form_extension'
 gem "paperclip"
-gem 'aws-sdk-v1'
+gem 'aws-sdk', '~> 2.3'
 gem "flat-ui-rails"
 
 group :development, :test do
