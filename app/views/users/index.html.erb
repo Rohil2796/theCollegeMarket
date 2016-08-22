@@ -5,9 +5,7 @@
 
 <ul class="users">
  <% @users.each do |user| %>
- <% if user.present? %>
     <%= render user %>
- <% end %>
   <% end %>
 </ul>
 
