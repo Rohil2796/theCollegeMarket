@@ -4,6 +4,8 @@ class User < ApplicationRecord
   belongs_to :community
   accepts_nested_attributes_for :community
   attr_accessor :remember_token, :activation_token, :reset_token
+  has_attached_file :avatar, 
+    styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   
   before_save   :downcase_email
   before_create :create_activation_digest
