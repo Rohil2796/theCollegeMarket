@@ -8,7 +8,7 @@ class User < ApplicationRecord
                     styles: { medium: "300x300>", thumb: "100x100>" }, 
                     default_url: "/images/:style/missing.png",
                     :storage => :s3,
-                    :s3_credentials => "#{Rails.root}/config/s3.yml",
+                    
                     :path => "/:class/:attachment/:id_partition/:style/:filename",
                     :url => ":s3_domain_url"
 
