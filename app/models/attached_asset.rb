@@ -14,7 +14,7 @@ class AttachedAsset < ActiveRecord::Base
   validates_attachment_content_type :asset, :content_type => /^image\/(png|gif|jpeg|jpg)/
  
   def s3_credentials
-    {:bucket => "#{ ENV['S3_BUCKET'] }", :access_key_id => "#{ ENV['S3_ACCESS_KEY']}", :secret_access_key => "#{ENV['S3_SECRET_KEY']}"}
+    {:bucket => "#{ ENV['S3_BUCKET'] }", :s3_region => "#{ENV['S3_REGION']}", :access_key_id => "#{ ENV['S3_ACCESS_KEY']}", :secret_access_key => "#{ENV['S3_SECRET_KEY']}"}
   end
 end
 
