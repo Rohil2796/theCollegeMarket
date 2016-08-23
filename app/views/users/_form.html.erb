@@ -6,7 +6,7 @@
   <%= f.input :password_confirmation %>
   <%= f.input :email, label: "Enter in your community-specific email",:input_html => {  prompt: "For Northwestern, use your 'u.northwestern.edu' email"  }%>
   <%= f.association :community %>
-  <%= f.input :avatar, as: :file, label: "file" %>
+  <%= f.input :avatar, as: :file %>
 
   <%= f.button :submit %>
 <% end %>
