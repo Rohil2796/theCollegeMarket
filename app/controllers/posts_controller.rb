@@ -25,6 +25,15 @@ def create
   end
 end
 
+  def update
+      @post = Post.find(params[:id])
+      if @Post.update_attributes(user_params)
+        flash[:success] = "Post updated"
+        redirect_to @post
+      else
+        render 'edit'
+      end
+    end
 
 
   def destroy
