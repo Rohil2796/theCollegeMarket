@@ -11,8 +11,9 @@ en:
     error_notification:
       default_message: "Please review the problems below:"
     labels: 
-      file: 
-        text: 'Choose an Avatar'
+      user:
+       new:  
+        file: 'Choose an Avatar'
     # Examples
     # labels:
     #   defaults:

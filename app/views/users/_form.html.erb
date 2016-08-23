@@ -1,12 +1,12 @@
 <%= simple_form_for @user do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
-  <%= f.input :firstName %>
-  <%= f.input :lastName %>
+  <%= f.input :firstName, label: "First Name:" %>
+  <%= f.input :lastName, label: "Last Name:" %>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
   <%= f.input :email, label: "Enter in your community-specific email",:input_html => {  prompt: "For Northwestern, use your 'u.northwestern.edu' email"  }%>
   <%= f.association :community %>
-  <%= f.input :avatar, as: :file %>
+  <%= f.input :avatar, as: :file, label: "file" %>
 
   <%= f.button :submit %>
 <% end %>
