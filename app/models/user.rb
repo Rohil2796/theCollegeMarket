@@ -6,7 +6,7 @@ class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
   has_attached_file :avatar, 
                     styles: { medium: "300x300>", thumb: "100x100>" }, 
-                   default_url: "http://myapplication-08012016.s3.amazonaws.com/avatar/default/:style"
+                   default_url: "http://myapplication-08012016.s3.amazonaws.com/avatar/default/:style",
                     :storage => :s3,
                     
                     :path => "/:class/:attachment/:id_partition/:style/:filename",
