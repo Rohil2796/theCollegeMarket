@@ -5,7 +5,7 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :community
   attr_accessor :remember_token, :activation_token, :reset_token
   has_attached_file :avatar, 
-                    styles: { medium: "300x300#", thumb: "100x100#" }, 
+                    styles: { medium: "300x300", thumb: "100x100" }, 
                    :default_url => "http://myapplication-08012016.s3.amazonaws.com/users/avatars/default/:style/missing.png" ,                  
                     :storage => :s3,
                     
