@@ -23,7 +23,6 @@ gem 'mailboxer'
 gem 'jquery-turbolinks'
 gem 'select2-rails'
 gem "selectize-rails"
-gem 'simple_form_extension'
 gem "paperclip"
 gem 'aws-sdk', '~> 2.3'
 gem "flat-ui-rails"
