@@ -14,7 +14,6 @@ end
 def create
   @post = current_user.post.build(post_params)
   if @post.save
-    end
     flash[:success] = "Post(s) successfully created!"
     redirect_to root_url
   else
