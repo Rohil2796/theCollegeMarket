@@ -4,28 +4,23 @@ before_action :correct_user,   only: :destroy
 
 def show
    @post = Post.find(params[:id])
-   @post_attachments = @post.post_attachments.all
    @attached_photos = AttachedAsset.order('post_id ASC')
 end
 
 def new
    @post = Post.new
-   @post_attachment = @post.post_attachments.build
 end
 
 def create
   @post = current_user.post.build(post_params)
   if @post.save
-    if !@post_attachment.nil? && params[:post_attachments]['avatar'].each do |a|
-        @post_attachment = @post.post_attachments.create!(:avatar => a)
-    end
     end
     flash[:success] = "Post(s) successfully created!"
     redirect_to root_url
   else
     render 'new'
   end
-end
+
 
 
   def destroy

@@ -11,7 +11,7 @@ class AttachedAsset < ActiveRecord::Base
   # Validation of file size
   validates_with AttachmentSizeValidator, :attributes => :asset, :less_than => 5.megabytes
   # Allow users to upload following image files
-  validates_attachment_content_type :avatar, :content_type => /^image\/(png|gif|jpeg|jpg)/
+  validates_attachment_content_type :asset, :content_type => /^image\/(png|gif|jpeg|jpg)/
  
   def s3_credentials
     {:bucket => "#{ ENV['S3_BUCKET'] }", :access_key_id => "#{ ENV['S3_ACCESS_KEY']}", :secret_access_key => "#{ENV['S3_SECRET_KEY']}"}
