@@ -6,8 +6,12 @@
      input_html: { id: 'itemservice_selector' },
      :include_blank => false %>
 
-  <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
+     <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
      <%= f.input :category, as: :selectize, input_html: { id: "category-select"} %>
+     <%= f.simple_fields_for :attached_assets, AttachedAsset.new do |asset| %>
+       <%= render 'attached_asset_fields', :f => asset %>
+       <%= link_to_add_association 'Add Another Photo', f, :attached_assets %>
+     <% end %> 
 
 
   <%= f.button :submit %>

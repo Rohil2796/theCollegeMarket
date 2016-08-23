@@ -27,7 +27,7 @@ gem 'simple_form_extension'
 gem "paperclip"
 gem 'aws-sdk', '~> 2.3'
 gem "flat-ui-rails"
-gem 'rails-i18n'
+gem "cocoon"
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'

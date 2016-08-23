@@ -5,11 +5,14 @@ class Post < ApplicationRecord
   belongs_to :category, :foreign_key => "category_id"
     accepts_nested_attributes_for :category
 
+  has_many :attached_assets, dependent: :destroy
+  # tell the model to accept the nested attributes for attached_assets
+  accepts_nested_attributes_for :attached_assets
+
   
   default_scope -> { order(created_at: :desc) }
   
-  has_many :post_attachments
-  accepts_nested_attributes_for :post_attachments
+ 
 
 
   validates :user_id, presence: true

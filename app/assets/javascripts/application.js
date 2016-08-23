@@ -20,4 +20,4 @@
 //= require jquery
 //= require simple_form_extension
 //= require jquery_ujs
-
+//= require cocoon

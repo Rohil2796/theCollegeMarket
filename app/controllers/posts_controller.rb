@@ -5,6 +5,7 @@ before_action :correct_user,   only: :destroy
 def show
    @post = Post.find(params[:id])
    @post_attachments = @post.post_attachments.all
+   @attached_photos = AttachedAsset.order('post_id ASC')
 end
 
 def new
@@ -37,7 +38,7 @@ end
 
     def post_params
       params.require(:post).permit(:name, :free, :price, :obo, :expiredate, :tix_eventname, :tix_eventdate, 
-      :tb_classname, :tb_classnumber, :offerrequest, :posttype, :category, :category_id, post_attachments_attributes: [:id, :post_id, :avatar])
+      :tb_classname, :tb_classnumber, :offerrequest, :posttype, :category, :category_id, attached_assets_attributes: [:id, :asset, :category, :_destroy])
     end
 
     def correct_user

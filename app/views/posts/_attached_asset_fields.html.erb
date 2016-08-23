@@ -1,0 +1,8 @@
+<div class="nested-fields" style="padding-bottom: 10px;">
+  
+  <div class="field">
+    <%= f.label :asset, "Photo to submit"%>
+    <%= f.file_field :asset, :required => true %>
+  </div>
+  <%= link_to_remove_association "Remove Photo", f %>
+</div>
