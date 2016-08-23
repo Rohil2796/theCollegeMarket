@@ -13,7 +13,7 @@ en:
     extension: 
       file:
        select: 'Choose an Avatar'
-       change: 'Choose an Avatar'
+       
     # Examples
     # labels:
     #   defaults:
