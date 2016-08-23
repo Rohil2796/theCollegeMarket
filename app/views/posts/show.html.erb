@@ -6,8 +6,8 @@
 </p>
 <% @attached_photos.each do |file| %>
   <li>
-    <%=link_to file.post.name, file.post %> - 
-    <%= link_to file.asset_file_name, file.asset.url, html_options = {download: ''} %>
+   <%= image_tag(file.asset.url(:thumb)), file.asset.url %>
+    <%= link_to file.asset_file_name, file.asset.url, html_options = {download: 'Download Photo'} %>
   </li>
 <% end %>
 
