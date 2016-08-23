@@ -11,6 +11,10 @@ def new
    @post = Post.new
 end
 
+def edit
+  @post = Post.find(params[:id])
+end
+
 def create
   @post = current_user.post.build(post_params)
   if @post.save
