@@ -6,7 +6,7 @@
 </p>
 <% @attached_photos.each do |file| %>
   <li>
-    <%=link_to file.team.name, file.team %> - 
+    <%=link_to file.post.name, file.post %> - 
     <%= link_to file.asset_file_name, file.asset.url, html_options = {download: ''} %>
   </li>
 <% end %>
