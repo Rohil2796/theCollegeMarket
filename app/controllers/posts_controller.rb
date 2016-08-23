@@ -27,7 +27,7 @@ end
 
   def update
       @post = Post.find(params[:id])
-      if @Post.update_attributes(user_params)
+      if @Post.update_attributes(post_params)
         flash[:success] = "Post updated"
         redirect_to @post
       else
