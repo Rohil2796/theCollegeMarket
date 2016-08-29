@@ -13,7 +13,7 @@
         <div class="media">
           <% message = receipt.message %>
           <div class="media-left">
-          <% if @user.exists? %>
+          <% if @user? %>
              <%= image_tag @user.avatar.url(:thumb) %>
           <% end %>
           </div>
