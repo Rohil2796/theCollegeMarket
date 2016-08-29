@@ -13,8 +13,8 @@
         <div class="media">
           <% message = receipt.message %>
           <div class="media-left">
-          <% if @user? %>
-             <%= image_tag @user.avatar.url(:thumb) %>
+          <% if message.sender.avatar? %>
+             <%= image_tag message.sender.avatar.url(:thumb) %>
           <% end %>
           </div>
           <div class="media-body">
