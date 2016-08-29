@@ -1,7 +1,7 @@
 module MailboxHelper
-  def unread_messages_count
+	 def unread_messages_count
     # how to get the number of unread messages for the current user
     # using mailboxer
-    mailbox.inbox(:unread => true).count(:id, :distinct => true)
+   current_user.mailbox.inbox({:read => false}).count
   end
 end

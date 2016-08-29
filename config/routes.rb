@@ -21,18 +21,17 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :tbposts,          only: [:create, :destroy]
 
-  # mailbox folder routes
-  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
-  get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
-  get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
-
-  resources :conversations do
+resources :conversations, only: [:index, :show, :destroy] do
     member do
       post :reply
-      post :trash
-      post :untrash
+      post :restore
+      post :mark_as_read
+    end
+    collection do
+      delete :empty_trash
     end
   end
+  resources :messages, only: [:new, :create]
 
 end
 

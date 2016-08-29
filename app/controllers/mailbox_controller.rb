@@ -16,4 +16,6 @@ class MailboxController < ApplicationController
     @active = :trash
   end
 
+ 
+
 end
