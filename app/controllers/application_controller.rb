@@ -6,14 +6,12 @@ class ApplicationController < ActionController::Base
   
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  protected
+ private
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :name
-    devise_parameter_sanitizer.for(:account_update) << :name
+  def mailbox
+    @mailbox ||= current_user.mailbox
   end
 
-  private
 
     # Confirms a logged-in user.
     def logged_in_user
@@ -23,4 +21,15 @@ class ApplicationController < ActionController::Base
         redirect_to login_url
       end
     end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) << :name
+    devise_parameter_sanitizer.for(:account_update) << :name
+  end
+
+  helper_method :mailbox
+  
+
 end
