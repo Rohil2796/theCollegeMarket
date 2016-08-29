@@ -4,7 +4,7 @@ before_action :correct_user,   only: :destroy
 
 def show
    @post = Post.find(params[:id])
-   @attached_photos = @post.AttachedAsset.order('post_id ASC')
+   @attached_photos = @post.attached_asset.order('post_id ASC')
 end
 
 def new
