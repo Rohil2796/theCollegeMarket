@@ -13,10 +13,10 @@
     <div class="input-group">
       <div class="input-group-addon">$</div>
      
-      <%= f.input :price, label: false, as: :number, :value => 0, max: 10000, input_html: { maxlength: 5, id: "price"} %>
+      <%= f.input :price, label: false, as: :integer, :value => 0, max: 10000, input_html: { maxlength: 5, id: "price"} %>
       <div class="input-group-addon">.00</div>
       <p class="help-block">Example block-level help text here.</p>
-    </div>
+    </didv>
     </div>
      <%= f.input :obo, label: "Is your item OBO (Or Best Offer?)" %>
      
