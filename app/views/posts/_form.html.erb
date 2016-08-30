@@ -13,7 +13,7 @@
     <div class="input-group">
       <div class="input-group-addon">$</div>
        <%= f.label :price %>
-      <%= f.input :price, label: false, as: :string, :value => 0, max: 10000, input_html: { maxlength: 5 } %>
+      <%= f.input :price, label: false, as: :integer, :value => 0, max: 10000, input_html: { maxlength: 5 } %>
       <div class="input-group-addon">.00</div>
     </div>
     
