@@ -8,10 +8,14 @@
 
      <%= f.input :price, label: "Free?", selected: 0,  as: :radio_buttons %>
      <%= f.input :category, as: :selectize, input_html: { id: "category-select"} %>
-     <%= f.simple_fields_for :attached_assets, AttachedAsset.new do |asset| %>
-       <%= render 'attached_asset_fields', :f => asset %>
-      <% end %> 
-       <%= link_to_add_association 'Add Another Photo', f, :attached_assets %>
+ <div id="attached_assets"> 
+    <%= f.simple_fields_for :attached_assets, AttachedAsset.new do |asset| %>
+      <%= render 'attached_asset_fields', :f => asset %>
+      <div class="links">
+        <%= link_to_add_association 'Add Another File', f, :attached_assets %>
+      </div>
+    <% end %>
+  </div>
     
 
 <!-- hey -->
