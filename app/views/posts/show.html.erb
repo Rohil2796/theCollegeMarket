@@ -5,7 +5,7 @@
  </p>
  <p> <%= @post.description %></p>
  <p> <%= @post.price %></p>
- <p> <%= @post.category_id %></p>
+ <p> <%= Category.find(@post.category_id) %></p>
 
 
 <% @attached_photos.each do |file| %>
