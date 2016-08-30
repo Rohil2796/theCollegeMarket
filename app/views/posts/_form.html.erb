@@ -13,7 +13,7 @@
     <div class="input-group">
       <div class="input-group-addon">$</div>
      
-      <%= f.input :price, label: false, collection: 0..10000, :value => 0, max: 10000, input_html: { maxlength: 5, id: "price"} %>
+      <%= f.input :price, label: false, as: :string, :value => 0, max: 10000, input_html: { maxlength: 5, id: "price"} %>
       <div class="input-group-addon">.00</div>
       <p class="help-block">Example block-level help text here.</p>
     </didv>
