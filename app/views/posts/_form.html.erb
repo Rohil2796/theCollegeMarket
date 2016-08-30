@@ -6,11 +6,17 @@
    <%= f.input :postitemservice, placeholder: "Select an option", label: "And is your post in regards to an item, or a service?",
      input_html: { id: 'itemservice_selector' },
      :include_blank => false %>
+
 <div class="switch">
      <%= f.input :price, label: "Free?", selected: 0,  input_html: { id: "cmn-toggle-7", class: "cmn-toggle cmn-toggle-yes-no"}%>
      </div>
-
-     <%= f.input :price, label: "Name your price!" %>
+<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+    <div class="input-group">
+      <div class="input-group-addon">$</div>
+      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+      <div class="input-group-addon">.00</div>
+    </div>
+    
      <%= f.input :obo, label: "Is your item OBO (Or Best Offer?)" %>
      
 
