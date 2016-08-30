@@ -6,12 +6,14 @@
    <%= f.input :postitemservice, placeholder: "Select an option", label: "And is your post in regards to an item, or a service?",
      input_html: { id: 'itemservice_selector' },
      :include_blank => false %>
+  <%= f.input :description, as: :text %>
 
 
 <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
     <div class="input-group">
       <div class="input-group-addon">$</div>
-      <%= f.input :price, label: false, as: :string, :value => 0, max: 10000 %>
+       <%= f.label :price %>
+      <%= f.input :price, label: false, as: :string, :value => 0, max: 10000, input_html: { maxlength: 5 } %>
       <div class="input-group-addon">.00</div>
     </div>
     
