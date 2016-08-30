@@ -10,8 +10,9 @@
      <%= f.input :category, as: :selectize, input_html: { id: "category-select"} %>
      <%= f.simple_fields_for :attached_assets, AttachedAsset.new do |asset| %>
        <%= render 'attached_asset_fields', :f => asset %>
+      <% end %> 
        <%= link_to_add_association 'Add Another Photo', f, :attached_assets %>
-     <% end %> 
+    
 
 <!-- hey -->
   <%= f.button :submit %>
