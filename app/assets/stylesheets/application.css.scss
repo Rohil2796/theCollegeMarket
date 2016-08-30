@@ -47,8 +47,8 @@ footer {
   clear: both
  }
 
-input[type=integer]::-webkit-inner-spin-button, 
-input[type=integer]::-webkit-outer-spin-button { 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
 }
