@@ -169,8 +169,8 @@ input.cmn-toggle-round-flat:checked + label:after {
 ============================================================ */
 input.cmn-toggle-yes-no + label {
   padding: 2px;
-  width: 120px;
-  height: 60px;
+  width: 60px;
+  height: 30px;
 }
 input.cmn-toggle-yes-no + label:before, input.cmn-toggle-yes-no + label:after {
   display: block;
@@ -181,9 +181,9 @@ input.cmn-toggle-yes-no + label:before, input.cmn-toggle-yes-no + label:after {
   right: 0;
   color: #fff;
   font-family: "Roboto Slab", serif;
-  font-size: 20px;
+  font-size: 12px;
   text-align: center;
-  line-height: 60px;
+  line-height: 30px;
 }
 input.cmn-toggle-yes-no + label:before {
   background-color: #dddddd;
