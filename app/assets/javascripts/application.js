@@ -21,3 +21,7 @@
 //= require simple_form_extension
 //= require jquery_ujs
 //= require cocoon
+//= require chosen-jquery
+//= require jquery.image-select
+//= require messages
+
