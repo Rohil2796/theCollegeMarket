@@ -20,7 +20,7 @@ class Post < ApplicationRecord
     message: "This title has already been taken - please don't spam our community! :)" }
   validates :description, length: { maximum: 1000 }
   validates :price, presence: true, length: { maximum: 5, 'Price must be a number, and less than $10,000'}, format: { with: VALID_PRICE_REGEX, message: 'Price must be a number, and less than $10,000' }
-  VALID_PRICE_REGEX = ^[1-9][0-9]*$
+  VALID_PRICE_REGEX = /^[0-9]+#$/
   # validates :expiredate,     date: { after: Proc.new { Time.now },
   #      dd           					before: Proc.new { Time.now + 1.year } }
 
