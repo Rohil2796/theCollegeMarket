@@ -10,7 +10,7 @@
      <%= f.input :price, label: "Free?", selected: 0,  as: :check_boxes %>
      <%= f.input :price, label: "Name your price!" %>
      <%= f.input :obo, label: "Is your item OBO (Or Best Offer?)" %>
-   
+
      <%= f.input :category, as: :selectize, input_html: { id: "category-select"} %>
  <div id="attached_assets"> 
     <%= f.simple_fields_for :attached_assets, AttachedAsset.new do |asset| %>
@@ -26,7 +26,8 @@
   <%= f.button :submit %>
    
 <% end %>
-  <div class="switch">
+
+<div class="switch">
   <input id="cmn-toggle-7" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
   <label for="cmn-toggle-7" data-on="Yes" data-off="No"></label>
 </div>
