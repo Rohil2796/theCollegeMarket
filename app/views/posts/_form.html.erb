@@ -8,7 +8,7 @@
      :include_blank => false %>
   <%= f.input :description, as: :text %>
 
-
+<div class="form-group">
 <label class="sr-only" for="price">Amount (in dollars)</label>
     <div class="input-group">
       <div class="input-group-addon">$</div>
@@ -17,7 +17,7 @@
       <div class="input-group-addon">.00</div>
       <p class="help-block">Example block-level help text here.</p>
     </div>
-    
+    </div>
      <%= f.input :obo, label: "Is your item OBO (Or Best Offer?)" %>
      
 
