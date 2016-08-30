@@ -5,7 +5,7 @@
     <%= render 'layouts/rails_defaults' %>
     <%= render 'layouts/shim' %>
   </head>
-  <body>
+  <body <%= yield(:body_attributes) %>>
     <%= render 'layouts/header' %>
     <div class="container">
         <% flash.each do |message_type, message| %>

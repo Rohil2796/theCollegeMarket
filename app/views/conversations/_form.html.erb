@@ -1,3 +1,4 @@
+<%= content_for(:body_attributes) do %>data-no-turbolink<% end %>
 <%= form_for :conversation, url: :conversations, html: { class: "" } do |f| %>
     <div class="form-group">
       <%= f.label :recipients %>
