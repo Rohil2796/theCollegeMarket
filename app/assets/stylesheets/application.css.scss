@@ -20,11 +20,11 @@
  *= require dropzone
  *= require _bootstrap
  */
+@import 'chosen';
+@import 'image-select';
 
 @import 'bootstrap';
 @import 'bootstrap/theme';
-@import 'chosen';
-@import 'image-select';
 
 .messages {
   max-height: 400px;

@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree 
 //= require bootstrap
 //= require posts
@@ -24,4 +24,4 @@
 //= require chosen-jquery
 //= require jquery.image-select
 //= require messages
-
+//= require turbolinks

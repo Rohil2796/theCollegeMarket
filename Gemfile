@@ -29,6 +29,7 @@ gem 'aws-sdk', '~> 2.3'
 gem "flat-ui-rails"
 gem "cocoon"
 gem 'chosen-rails'
+gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
