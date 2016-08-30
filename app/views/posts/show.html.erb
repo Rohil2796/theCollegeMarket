@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <p>
-  <strong>Name:</strong>
+  <strong>Title:</strong>
   <%= @post.name %>
   <%= @post.description %>
 </p>
@@ -10,6 +10,7 @@
    <%= link_to file.asset_file_name, file.asset.url, html_options = {download: 'Download Photo'} %>
   </li>
 <% end %>
+<%= link_to 'Send message', new_message_path(to: user.id), class: 'btn btn-default btn-sm' %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
