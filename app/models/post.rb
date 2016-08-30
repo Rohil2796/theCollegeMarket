@@ -21,7 +21,7 @@ class Post < ApplicationRecord
   validates :description, length: { maximum: 1000 }
   VALID_PRICE_REGEX = /\A[0-9]\z/
   validates :price, presence: true, length: { maximum: 5, message: 'Price must be a number, and less than $10,000'}, format: { with: VALID_PRICE_REGEX, message: 'Price must be a number, and less than $10,000' }
-  validates :category_id, presence: true
+  validates :category, presence: true
 
   # validates :expiredate,     date: { after: Proc.new { Time.now },
   #      dd           					before: Proc.new { Time.now + 1.year } }
@@ -30,12 +30,12 @@ class Post < ApplicationRecord
   enum status: { active: 0, inactive: 1, sold: 2 }
   validates :status, inclusion: { in: statuses.keys }
 
-  enum postitemservice: { "Item" => 0, "Service" => 1 }
+  enum postitemservice: { Item: 0, Service: 1 }
+  validates :postitemservice, inclusion: { in: postitemservices.keys }
 
 
 
-
-  enum offerrequest: { offer: 0, request: 1 }
+  enum offerrequest: { Offer: 0, Request: 1 }
   validates :offerrequest, inclusion: { in: offerrequests.keys }
 
   
