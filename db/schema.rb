@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160829161338) do
+ActiveRecord::Schema.define(version: 20160830215336) do
 
   create_table "attached_assets", force: :cascade do |t|
     t.string   "caption"
@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(version: 20160829161338) do
   create_table "posts", force: :cascade do |t|
     t.string   "name"
     t.boolean  "free"
-    t.decimal  "price"
+    t.integer  "price",           default: 0, null: false
     t.boolean  "obo"
     t.date     "expiredate"
     t.string   "tix_eventname"
