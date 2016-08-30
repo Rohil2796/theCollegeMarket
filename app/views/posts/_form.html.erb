@@ -7,13 +7,11 @@
      input_html: { id: 'itemservice_selector' },
      :include_blank => false %>
 
-<div class="switch">
-     <%= f.input :price, label: "Free?", selected: 0,  input_html: { id: "cmn-toggle-7", class: "cmn-toggle cmn-toggle-yes-no"}%>
-     </div>
+
 <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
     <div class="input-group">
       <div class="input-group-addon">$</div>
-      <%= f.input :price, label: false, as: :string %>
+      <%= f.input :price, label: false, as: :string, :value => 0, max: 10000 %>
       <div class="input-group-addon">.00</div>
     </div>
     
