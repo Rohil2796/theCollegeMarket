@@ -2,9 +2,12 @@
 <p>
   <strong>Title:</strong>
   <%= @post.name %>
-  <%= @post.description %>
-  <%= @post.price %>
-</p>
+ </p>
+ <p> <%= @post.description %></p>
+ <p> <%= @post.price %></p>
+ <p> <%= @post.category_id %></p>
+
+
 <% @attached_photos.each do |file| %>
   <li>
    <%= image_tag(file.asset.url(:thumb)) %>
