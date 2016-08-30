@@ -3,9 +3,26 @@
   <strong>Title:</strong>
   <%= @post.name %>
  </p>
- <p> <%= @post.description %></p>
- <p> <%= @post.price %></p>
- <p> <%= Category.find(@post.category_id).name %></p>
+<p>
+  <strong>Description:</strong>
+  <%= @post.description %>
+</p>
+<p> 
+  <strong>Offer or Request?</strong> 
+   <%= @post.offerrequest %>
+ </p>
+ <p> 
+  <strong>Item or Service?</strong> 
+   <%= @post.itemservice %>
+ </p>
+ <p> 
+  <strong>Price:</strong> 
+  <%= '$'+@post.price+'.00' %>
+ </p>
+ <p> 
+	 <strong>Category:</strong> 
+	 <%= Category.find(@post.category_id).name %>
+</p>
 
 
 <% @attached_photos.each do |file| %>
