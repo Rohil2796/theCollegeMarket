@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require chosen-jquery
 //= require_tree 
 //= require bootstrap
 //= require posts
@@ -21,7 +22,6 @@
 //= require simple_form_extension
 //= require jquery_ujs
 //= require cocoon
-//= require chosen-jquery
 //= require jquery.image-select
 //= require messages
 //= require turbolinks

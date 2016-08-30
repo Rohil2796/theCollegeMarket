@@ -4,7 +4,7 @@
 <%= form_tag messages_path, method: :post do %>
 
   <div class="form-group">
-    <%= label_tag 'recipients', 'Choose recipients' %>
+    <%= label_tag 'recipients', 'Recepient:' %>
     <%= select_tag 'recipients', recipients_options(@chosen_recipient), multiple: true, disabled: true,  class: 'form-control chosen-it' %>
   </div>
 
