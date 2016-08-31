@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
  def home
     if logged_in?
-      @post  = current_user.post.build
+      @post = Post.find(params[:id])
       @feed_items = current_user.feed.paginate(page: params[:page])
       @attached_photos = @post.attached_assets.order('post_id ASC').take(1)
     end
@@ -15,9 +15,6 @@ class PagesController < ApplicationController
 
   def contact
   end 
- def post
-   @post = Post.find(params[:id])
-   @attached_photos = @post.attached_assets.order('post_id ASC').take(1)
-  end
+
   
 end
