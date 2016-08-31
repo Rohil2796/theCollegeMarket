@@ -32,14 +32,11 @@
 <div class="card-box col-md-4 col-sm-4">
                 <div class="card" data-background="color" data-color="black">                            
                     <div class="header">
-                    <% if !post.attached_assets.nil? %>
+                  
                        <% @attached_photos.first(1).each do |file| %>
                           <li>
                            <%= image_tag(file.asset.url(:thumb)) %>
                           </li>
-                        <% end %>
-                    <% else %>
-                      <img src="assets/images/home-1.jpg"/>
                     <% end %>
                         <div class="category">
                             <h6 class="label label-danger">Favorite</h6>    
@@ -56,8 +53,8 @@
                     </div>
                     
                     <div class="content">
-                        <h6 class="category"><%= post.name %></h6>
-                        <h4 class="title"><a href="#"><%= Category.find(post.category_id).name %></a></h4>
+                        <h6 class="category"><%= Category.find(post.category_id).name %></h6>
+                        <h4 class="title"><a href="#"><%= post.name %></a></h4>
                         <p class="description"><%= post.description %></p>
                     </div>                                           
                 </div> <!-- end card -->      
