@@ -39,9 +39,5 @@ class Post < ApplicationRecord
   validates :offerrequest, inclusion: { in: offerrequests.keys }
 
   
- def post
-   @post = Post.find(params[:id])
-   @attached_photos = @post.attached_assets.order('post_id ASC').take(1)
-  end
-  
+
 end
