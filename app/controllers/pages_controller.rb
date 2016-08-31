@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :post 
+  
   def about
   end
 
