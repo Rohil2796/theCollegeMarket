@@ -54,7 +54,7 @@
                     
                     <div class="content">
                         <h6 class="category"><%= Category.find(post.category_id).name %></h6>
-                        <h4 class="title"><a href="#"><%= post.name %></a></h4>
+                        <h5 class="title"><%= link_to post.name, post %></h5>
                         <p class="description"><%= post.description %></p>
                     </div>                                           
                 </div> <!-- end card -->      
