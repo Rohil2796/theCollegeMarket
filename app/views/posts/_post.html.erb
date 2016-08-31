@@ -32,7 +32,7 @@
                 <div class="card" data-background="color" data-color="black">                            
                     <div class="header">
                     <% if !@post.attached_assets.nil? %>
-                       <% @attached_photos.each do |file| %>
+                       <% @attached_photos.first(1).each do |file| %>
                           <li>
                            <%= image_tag(file.asset.url(:thumb)) %>
                           </li>
