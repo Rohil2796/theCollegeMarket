@@ -1,4 +1,4 @@
-<li id="post-<%= post.id %>">
+<!-- <li id="post-<%= post.id %>">
   <%= link_to gravatar_for(post.user, size: 50), post.user %>
   <span class="user"><%= link_to post.user.firstName, post %></span>
   <span class="content">
@@ -27,4 +27,39 @@
     <% end %>
   </span>
 </li>
+ -->
+<div class="card-box col-md-4 col-sm-6">
+                <div class="card" data-background="color" data-color="black">                            
+                    <div class="header">
+                    <% if !@post.attached_assets.nil? %>
+                       <% @attached_photos.first(1).each do |file| %>
+                          <li>
+                           <%= image_tag(file.asset.url(:thumb)) %>
+                          </li>
+                        <% end %>
+                    <% else %>
+                      <img src="assets/img/home-1.jpg"/>
+                    <% end %>
+                        <div class="category">
+                            <h6 class="label label-danger">Favorite</h6>    
+                        </div>
+                     
 
+                        <div class="filter"></div>
+                        
+                        <div class="actions">
+                            <button class="btn btn-round btn-fill btn-neutral btn-modern">
+                                View More Photos
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="content">
+                        <h6 class="category">Interior Design</h6>
+                        <h4 class="title"><a href="#">@post.name</a></h4>
+                        <p class="description">@post.description</p>
+                    </div>                                           
+                </div> <!-- end card -->      
+            </div> 
+
+            

@@ -25,3 +25,6 @@
 //= require jquery.image-select
 //= require messages
 //= require turbolinks
+//= require jquery-1.10.2
+//= require hipster-cards
+//= require bootstrap.min
