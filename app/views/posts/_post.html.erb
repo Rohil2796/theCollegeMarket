@@ -35,7 +35,7 @@
                   
                        <% post.attached_assets.each do |file| %>
                           <li>
-                           <%= image_tag(file.asset.url(:medium)) %>
+                           <%= image_tag(file.asset.url(:original)) %>
                           </li>
                     <% end %>
                         <div class="category">
