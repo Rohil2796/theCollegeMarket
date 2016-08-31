@@ -2,7 +2,7 @@
 <% if logged_in? %>
   <div class="row">
 
-    <aside class="col-md-3 col-md-pull-9">
+    <aside class="col-lg-3">
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
@@ -10,7 +10,7 @@
         <%= link_to "Create new post!", 'posts/new', class: "btn btn-lg btn-primary" %>
       </section>
     </aside>
-  <div class="col-md-9 col-md-push-3">
+  <div class="col-lg-9 col-lg-push-3">
       <h3>Textbook Feed</h3>
       <%= render 'shared/feed' %>
     </div>
