@@ -19,7 +19,7 @@
   <% end %>
 
   </span>
-  <span class="timestamp">
+  <span class="timestdamp">
     Posted <%= time_ago_in_words(post.created_at) %> ago.
     <% if current_user?(post.user) %>
       <%= link_to "delete", post, method: :delete,
