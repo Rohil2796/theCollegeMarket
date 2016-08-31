@@ -28,10 +28,11 @@
   </span>
 </li>
  -->
+ <li id="post-<%= post.id %>">
 <div class="card-box col-md-4 col-sm-4">
                 <div class="card" data-background="color" data-color="black">                            
                     <div class="header">
-                    <% if !@post.attached_assets.nil? %>
+                    <% if !post.attached_assets.nil? %>
                        <% @attached_photos.first(1).each do |file| %>
                           <li>
                            <%= image_tag(file.asset.url(:thumb)) %>
@@ -56,10 +57,10 @@
                     
                     <div class="content">
                         <h6 class="category">Interior Design</h6>
-                        <h4 class="title"><a href="#">@post.name</a></h4>
-                        <p class="description">@post.description</p>
+                        <h4 class="title"><a href="#">post.name</a></h4>
+                        <p class="description">post.description</p>
                     </div>                                           
                 </div> <!-- end card -->      
             </div> 
-
+</li>
             
