@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 before_action :logged_in_user, only: [:create, :destroy]
 before_action :correct_user,   only: :destroy
-before_filter :post 
 
 def show
    @post = Post.find(params[:id])
@@ -43,10 +42,7 @@ end
     redirect_to request.referrer || root_url
   end
 
-  def post
-   @post = Post.find(params[:id])
-   @attached_photos = @post.attached_assets.order('post_id ASC').take(1)
-  end
+ 
 
   private
 

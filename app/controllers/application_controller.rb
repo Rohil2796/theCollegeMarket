@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   
-  
+  before_filter :post
 
   
    rescue_from ActiveRecord::RecordNotFound do
@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
     redirect_to request.referer || path
   end
 
+ def post
+   @post = Post.find(params[:id])
+   @attached_photos = @post.attached_assets.order('post_id ASC').take(1)
+  end
 
 
   private
