@@ -7,8 +7,8 @@ class PagesController < ApplicationController
     if logged_in?
       @post  = current_user.post.build
       @feed_items = current_user.feed.paginate(page: params[:page])
-       @post2 = Post.find(params[:id])
-      @attached_photos = @post2.attached_assets.order('post_id ASC').take(1)
+       
+      @attached_photos = @post.attached_assets.order('post_id ASC').take(1)
     end
   end
 
