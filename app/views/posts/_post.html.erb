@@ -33,9 +33,9 @@
                 <div class="card" data-background="color" data-color="black">                            
                     <div class="header">
                   
-                       <% post.attached_assets.first(1).each do |file| %>
+                       <% post.attached_assets.each do |file| %>
                           <li>
-                           <%= image_tag(file.asset.url(:thumb)) %>
+                           <%= image_tag(file.asset.url(:medium)) %>
                           </li>
                     <% end %>
                         <div class="category">
