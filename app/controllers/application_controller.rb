@@ -18,10 +18,7 @@ class ApplicationController < ActionController::Base
     redirect_to request.referer || path
   end
 
- def post
-   @post = Post.find(params[:id])
-   @attached_photos = @post.attached_assets.order('post_id ASC').take(1)
-  end
+
 
 
   private
