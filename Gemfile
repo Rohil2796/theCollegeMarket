@@ -30,6 +30,8 @@ gem "flat-ui-rails"
 gem "cocoon"
 gem 'chosen-rails'
 gem 'jquery-turbolinks'
+gem 'compass-rails'
+gem 'chosen-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
