@@ -27,4 +27,4 @@
 //= require turbolinks
 //= require jquery-1.10.2
 //= require hipster-cards
-//= require ct-navbar
+//= require bootstrap.min

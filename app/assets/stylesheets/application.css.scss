@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require style
+ *= require posts
+ *= require select2
+ *= require select2-bootstrap
+ *= require selectize
+ *= require selectize.default
+ *= require dropzone
+ *= require _bootstrap
+ *= require pe-icon-7-stroke
+ *= require hipster_cards
+ */
+@import 'chosen';
+@import 'image-select';
+
+@import 'bootstrap';
+@import 'bootstrap/theme';
+
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-warning;
+}
+
+footer {
+  margin-top: 2em;
+  clear: both
+ }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin:0;/* <-- Apparently some margin are still there even though it's hidden */
+}

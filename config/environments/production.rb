@@ -1,7 +1,5 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-config.assets.precompile += [/^[-_a-zA-Z0-9]*\..*/]
-
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   host = 'https://sleepy-fortress-31986.herokuapp.com'
