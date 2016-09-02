@@ -21,5 +21,10 @@
  *= require dropzone
  *= require pe-icon-7-stroke
  *= require ct-navbar
+ *= require _bootstrap
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 
