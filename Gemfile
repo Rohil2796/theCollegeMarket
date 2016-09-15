@@ -31,7 +31,6 @@ gem "cocoon"
 gem 'chosen-rails'
 gem 'jquery-turbolinks'
 gem 'bootstrap-sprockets'
-gem "bootstrap"
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
