@@ -30,7 +30,7 @@ gem "flat-ui-rails"
 gem "cocoon"
 gem 'chosen-rails'
 gem 'jquery-turbolinks'
-gem 'bootstrap-sprockets', '~>3.3'
+gem 'bootstrap-sprockets'
 gem "bootstrap"
 
 group :development, :test do
