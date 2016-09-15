@@ -10,7 +10,7 @@ gem 'will_paginate',           '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'bootstrap-sass',          '3.3.6'
 gem 'puma',                    '3.4.0'
-gem 'sass-rails',              '5.0.5'
+gem 'sass-rails'             
 gem 'uglifier',                '3.0.0'
 gem 'coffee-rails',            '4.2.1'
 gem 'jquery-rails',            '4.1.1'
@@ -30,7 +30,6 @@ gem "flat-ui-rails"
 gem "cocoon"
 gem 'chosen-rails'
 gem 'jquery-turbolinks'
-gem 'bootstrap-sprockets'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'

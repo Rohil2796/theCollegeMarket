@@ -444,7 +444,7 @@ DEPENDENCIES
   puma (= 3.4.0)
   rails (= 5.0.0)
   rails-controller-testing (= 0.1.1)
-  sass-rails (= 5.0.5)
+  sass-rails
   select2-rails
   selectize-rails
   simple_form
@@ -459,4 +459,4 @@ DEPENDENCIES
   will_paginate (= 3.1.0)
 
 BUNDLED WITH
-   1.12.5
+   1.13.1
